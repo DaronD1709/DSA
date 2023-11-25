@@ -4,7 +4,7 @@
 #include "_lib.h"
 #include "Fuction.h"
 
-string fname = "F://DATA str//Final_____//RestauranList.csv";
+string fname = "C://Users//HALO//Desktop//DSA CHAIN//RestauranList.csv";
 
 // viet de tu Arr -> File
 void writeRestaurantToCSV(string filename, Restaurant ChainArr[])

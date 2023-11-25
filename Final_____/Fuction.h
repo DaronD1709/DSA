@@ -37,12 +37,12 @@ Record HistoryArr[100];
         }
     }
     // datban
-    void StamentSetTable(LinkedList<Restaurant> Chain, Stack<Record>& History, double& Totalmoney, string Resid, int Tablenumber, int cusnum, int dayT, int mothT, int yearT)
+    void StamentSetTable(LinkedList<Restaurant> Chain, Stack<Record>& History, double& Totalmoney, string Resid, string phonenumber,string cusname, int Tablenumber, int cusnum, int dayT, int mothT, int yearT)
     {
         Restaurant a;
         a.Capacity = Chain.findNodeByID(Resid)->data.Capacity;
         a.id = Chain.findNodeByID(Resid)->data.id;
-        for (int i = 1; i < MaxTable; i++)
+        for (int i = 1; i <= MaxTable; i++)
         {
             a.Tablearr[i] = Chain.findNodeByID(Resid)->data.Tablearr[i];
         }
@@ -54,7 +54,9 @@ Record HistoryArr[100];
 
         // add
         Record u;
-        u.AddorRemove = 1;
+        u.cusname = cusnum;
+        u.phonenumber = phonenumber;
+        u.AddorRemove = true;
         u.cusnum = cusnum;
         u.dayT = dayT;
         u.money = cusnum * moneyperone;
@@ -68,12 +70,12 @@ Record HistoryArr[100];
     }
 
     // huyban
-    void StamentDeleteTable(LinkedList<Restaurant>& Chain, Stack<Record>& History, double& Totalmoney, string Resid, int Tablenumber, int cusnum, int dayT, int mothT, int yearT)
+    void StamentDeleteTable(LinkedList<Restaurant>& Chain, Stack<Record>& History, double& Totalmoney, string Resid,string cusname,string phonenumber, int Tablenumber, int cusnum, int dayT, int mothT, int yearT)
     {
         Restaurant a;
         a.Capacity = Chain.findNodeByID(Resid)->data.Capacity;
         a.id = Chain.findNodeByID(Resid)->data.id;
-        for (int i = 1; i < MaxTable; i++)
+        for (int i = 1; i <= MaxTable; i++)
         {
             a.Tablearr[i] = Chain.findNodeByID(Resid)->data.Tablearr[i];
         }
@@ -85,6 +87,8 @@ Record HistoryArr[100];
 
         // add
         Record u;
+        u.cusname = cusname;
+        u.phonenumber = phonenumber;
         u.AddorRemove = 0;
         u.cusnum = cusnum;
         u.money = -(cusnum * moneyperone);
@@ -119,6 +123,10 @@ Record HistoryArr[100];
         Chain.ToArray(ChainArr);
     }
 
+    void ToArrayHistory(Stack<Record>& History, Record HistoryArr[])
+    {
+        History.ToArrayHistory(HistoryArr);
+    }
 
     static std::string toStandardString(System::String^ string)
     {

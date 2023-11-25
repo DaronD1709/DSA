@@ -186,7 +186,7 @@ namespace Final {
 			this->tabControl1->Location = System::Drawing::Point(1, 0);
 			this->tabControl1->Name = L"tabControl1";
 			this->tabControl1->SelectedIndex = 0;
-			this->tabControl1->Size = System::Drawing::Size(1151, 496);
+			this->tabControl1->Size = System::Drawing::Size(1227, 540);
 			this->tabControl1->TabIndex = 0;
 			// 
 			// tabPage1
@@ -213,7 +213,7 @@ namespace Final {
 			this->tabPage1->Location = System::Drawing::Point(4, 25);
 			this->tabPage1->Name = L"tabPage1";
 			this->tabPage1->Padding = System::Windows::Forms::Padding(3);
-			this->tabPage1->Size = System::Drawing::Size(1143, 467);
+			this->tabPage1->Size = System::Drawing::Size(1219, 511);
 			this->tabPage1->TabIndex = 0;
 			this->tabPage1->Text = L"Booking The Table ";
 			this->tabPage1->UseVisualStyleBackColor = true;
@@ -349,11 +349,11 @@ namespace Final {
 			// CusGirdView
 			// 
 			this->CusGirdView->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
-			this->CusGirdView->Location = System::Drawing::Point(630, 18);
+			this->CusGirdView->Location = System::Drawing::Point(689, 27);
 			this->CusGirdView->Name = L"CusGirdView";
 			this->CusGirdView->RowHeadersWidth = 51;
 			this->CusGirdView->RowTemplate->Height = 24;
-			this->CusGirdView->Size = System::Drawing::Size(503, 432);
+			this->CusGirdView->Size = System::Drawing::Size(503, 462);
 			this->CusGirdView->TabIndex = 4;
 			// 
 			// DayBox
@@ -555,7 +555,7 @@ namespace Final {
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(1163, 496);
+			this->ClientSize = System::Drawing::Size(1230, 542);
 			this->Controls->Add(this->tabControl1);
 			this->Name = L"CustomerForm";
 			this->Text = L"CustomerForm";
@@ -579,6 +579,8 @@ namespace Final {
 
 private: System::Void donebutton_Click(System::Object^ sender, System::EventArgs^ e) 
 {
+	string cusname = toStandardString(nametextbox->Text);
+	string phonenumber = toStandardString(phonetextbox->Text);
 	string Resid = toStandardString(ResidBox->Text);
 	string stablenum = toStandardString(idtextbox->Text);
 	int Tablenumber = stoi(stablenum);
@@ -586,7 +588,7 @@ private: System::Void donebutton_Click(System::Object^ sender, System::EventArgs
 	int dayT = stoi(toStandardString(DayBox->Text));
 	int mothT = stoi(toStandardString(MothBox->Text));
 	int yearT = stoi(toStandardString(YearBox->Text));
-	StamentSetTable(Chain, History, TotalMoney, Resid, Tablenumber, cusnum, dayT, mothT, yearT);
+	StamentSetTable(Chain, History, TotalMoney, Resid,phonenumber,cusname,Tablenumber, cusnum, dayT, mothT, yearT);
 	ResidBox->Clear();
 	idtextbox->Clear();
 	CusnumBox->Clear();
@@ -600,7 +602,8 @@ private: System::Void textBox2_TextChanged(System::Object^ sender, System::Event
 }
 private: System::Void buttondone_Click(System::Object^ sender, System::EventArgs^ e) 
 {
-
+	string cusname = toStandardString(NameDel->Text);
+	string phonenumber = toStandardString(PhoneDel->Text);
 	string Resid = toStandardString(ResDel->Text);
 	string stablenum = toStandardString(TableDel->Text);
 	int Tablenumber = stoi(stablenum);
@@ -609,7 +612,7 @@ private: System::Void buttondone_Click(System::Object^ sender, System::EventArgs
 	int mothT = stoi(toStandardString(MothDel->Text));
 	int yearT = stoi(toStandardString(YearDel->Text));
 
-	StamentDeleteTable(Chain, History, TotalMoney, Resid, Tablenumber, cusnum, dayT, mothT, yearT);
+	StamentDeleteTable(Chain, History, TotalMoney, Resid,phonenumber,cusname, Tablenumber, cusnum, dayT, mothT, yearT);
 
 	ResDel->Clear();
 	TableDel->Clear();
@@ -653,7 +656,7 @@ private: System::Void ViewRes_Click(System::Object^ sender, System::EventArgs^ e
 private: System::Void listbutton_Click(System::Object^ sender, System::EventArgs^ e) 
 {
 	Table A[21];
-	for (int i = 0; i <= 20; i++)
+	for (int i = 1; i <= 20; i++)
 	{
 		A[i].id = Chain.findNodeByID(toStandardString(ResidBox->Text))->data.Tablearr[i].id;
 		A[i].statement = Chain.findNodeByID(toStandardString(ResidBox->Text))->data.Tablearr[i].statement;

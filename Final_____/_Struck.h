@@ -13,11 +13,12 @@ struct Restaurant
     Table Tablearr[30];
     double profit;
     int staff;
-
 };
 struct Record
 {
     string tableid;
+    string cusname;
+    string phonenumber;
     int cusnum;
     int money;
     int dayT;

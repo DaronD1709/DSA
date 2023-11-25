@@ -111,4 +111,24 @@ public:
         return totalProfit;
     }
     
+     void ToArrayHistory(Record HistoryArr[]) const
+    {
+        int i = 0;
+
+            Node* current = topNode;
+            while (current != nullptr)
+            {
+                HistoryArr[i].tableid = current->data.tableid;
+                HistoryArr[i].cusname = current->data.cusname;
+                HistoryArr[i].phonenumber = current->data.phonenumber;
+                HistoryArr[i].cusnum = current->data.cusnum;
+                HistoryArr[i].money = current->data.money;
+                HistoryArr[i].dayT = current->data.dayT;
+                HistoryArr[i].mothT = current->data.mothT;
+                HistoryArr[i].yearT = current->data.yearT;
+                HistoryArr[i].AddorRemove = current->data.AddorRemove;
+                i++;
+                current = current->next;
+            }
+    }
 };

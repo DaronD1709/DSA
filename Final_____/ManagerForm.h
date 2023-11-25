@@ -1,4 +1,4 @@
-#pragma once
+﻿#pragma once
 #include <string>
 #include <fstream>
 #include "File.h"
@@ -50,13 +50,13 @@ namespace Final {
 
 	private: System::Windows::Forms::DataVisualization::Charting::Chart^ chart1;
 	private: System::Windows::Forms::TabPage^ tabPage2;
-	private: System::Windows::Forms::Button^ button2;
-	private: System::Windows::Forms::Button^ button1;
-	private: System::Windows::Forms::Label^ label6;
-	private: System::Windows::Forms::Label^ label5;
-	private: System::Windows::Forms::TextBox^ Phonetextbox;
 
-	private: System::Windows::Forms::TextBox^ Customertextbox;
+
+
+
+
+
+
 
 	private: System::Windows::Forms::DataGridView^ dataGridView2;
 	private: System::Windows::Forms::TabPage^ tabPage1;
@@ -73,12 +73,20 @@ namespace Final {
 	private: System::Windows::Forms::DataGridView^ dataGridView1;
 	private: System::Windows::Forms::TabControl^ tabControl1;
 	private: System::Windows::Forms::TabPage^ Historytab;
-	private: System::Windows::Forms::Button^ button3;
-	private: System::Windows::Forms::DataGridView^ dataGridView3;
-	private: System::Windows::Forms::Label^ label7;
-	private: System::Windows::Forms::TextBox^ textBox1;
-	private: System::Windows::Forms::Button^ button4;
 	private: System::Windows::Forms::Button^ Showbutton;
+
+	private: System::Windows::Forms::DataGridView^ dataGridView3;
+
+
+	private: System::Windows::Forms::DataVisualization::Charting::Chart^ chart2;
+	private: System::Windows::Forms::Button^ loadbutton;
+
+	private: System::Windows::Forms::Label^ label7;
+	private: System::Windows::Forms::Label^ label8;
+	private: System::Windows::Forms::Button^ buttonshow;
+	private: System::Windows::Forms::Button^ buttondel;
+
+
 
 	protected:
 
@@ -152,10 +160,17 @@ namespace Final {
 		/// </summary>
 		void InitializeComponent(void)
 		{
+			System::Windows::Forms::DataVisualization::Charting::ChartArea^ chartArea1 = (gcnew System::Windows::Forms::DataVisualization::Charting::ChartArea());
+			System::Windows::Forms::DataVisualization::Charting::Legend^ legend1 = (gcnew System::Windows::Forms::DataVisualization::Charting::Legend());
+			System::Windows::Forms::DataVisualization::Charting::Series^ series1 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
+			System::Windows::Forms::DataVisualization::Charting::Title^ title1 = (gcnew System::Windows::Forms::DataVisualization::Charting::Title());
 			System::Windows::Forms::DataVisualization::Charting::ChartArea^ chartArea2 = (gcnew System::Windows::Forms::DataVisualization::Charting::ChartArea());
 			System::Windows::Forms::DataVisualization::Charting::Legend^ legend2 = (gcnew System::Windows::Forms::DataVisualization::Charting::Legend());
 			System::Windows::Forms::DataVisualization::Charting::Series^ series2 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
+			System::Windows::Forms::DataVisualization::Charting::Title^ title2 = (gcnew System::Windows::Forms::DataVisualization::Charting::Title());
 			this->tabPage4 = (gcnew System::Windows::Forms::TabPage());
+			this->loadbutton = (gcnew System::Windows::Forms::Button());
+			this->chart2 = (gcnew System::Windows::Forms::DataVisualization::Charting::Chart());
 			this->tabPage3 = (gcnew System::Windows::Forms::TabPage());
 			this->buttonlast = (gcnew System::Windows::Forms::Button());
 			this->Midbutton = (gcnew System::Windows::Forms::Button());
@@ -163,15 +178,11 @@ namespace Final {
 			this->Firstbutton = (gcnew System::Windows::Forms::Button());
 			this->chart1 = (gcnew System::Windows::Forms::DataVisualization::Charting::Chart());
 			this->tabPage2 = (gcnew System::Windows::Forms::TabPage());
-			this->button2 = (gcnew System::Windows::Forms::Button());
-			this->button1 = (gcnew System::Windows::Forms::Button());
-			this->label6 = (gcnew System::Windows::Forms::Label());
-			this->label5 = (gcnew System::Windows::Forms::Label());
-			this->Phonetextbox = (gcnew System::Windows::Forms::TextBox());
-			this->Customertextbox = (gcnew System::Windows::Forms::TextBox());
+			this->buttonshow = (gcnew System::Windows::Forms::Button());
+			this->buttondel = (gcnew System::Windows::Forms::Button());
 			this->dataGridView2 = (gcnew System::Windows::Forms::DataGridView());
 			this->tabPage1 = (gcnew System::Windows::Forms::TabPage());
-			this->Showbutton = (gcnew System::Windows::Forms::Button());
+			this->label8 = (gcnew System::Windows::Forms::Label());
 			this->Quantitytextbox = (gcnew System::Windows::Forms::TextBox());
 			this->Capacitytextbox = (gcnew System::Windows::Forms::TextBox());
 			this->IDtextbox = (gcnew System::Windows::Forms::TextBox());
@@ -186,10 +197,10 @@ namespace Final {
 			this->tabControl1 = (gcnew System::Windows::Forms::TabControl());
 			this->Historytab = (gcnew System::Windows::Forms::TabPage());
 			this->label7 = (gcnew System::Windows::Forms::Label());
-			this->textBox1 = (gcnew System::Windows::Forms::TextBox());
-			this->button4 = (gcnew System::Windows::Forms::Button());
-			this->button3 = (gcnew System::Windows::Forms::Button());
+			this->Showbutton = (gcnew System::Windows::Forms::Button());
 			this->dataGridView3 = (gcnew System::Windows::Forms::DataGridView());
+			this->tabPage4->SuspendLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->chart2))->BeginInit();
 			this->tabPage3->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->chart1))->BeginInit();
 			this->tabPage2->SuspendLayout();
@@ -203,13 +214,50 @@ namespace Final {
 			// 
 			// tabPage4
 			// 
-			this->tabPage4->Location = System::Drawing::Point(4, 25);
+			this->tabPage4->Controls->Add(this->loadbutton);
+			this->tabPage4->Controls->Add(this->chart2);
+			this->tabPage4->Location = System::Drawing::Point(4, 37);
+			this->tabPage4->Margin = System::Windows::Forms::Padding(3, 5, 3, 5);
 			this->tabPage4->Name = L"tabPage4";
-			this->tabPage4->Padding = System::Windows::Forms::Padding(3);
-			this->tabPage4->Size = System::Drawing::Size(1156, 527);
+			this->tabPage4->Padding = System::Windows::Forms::Padding(3, 5, 3, 5);
+			this->tabPage4->Size = System::Drawing::Size(1275, 570);
 			this->tabPage4->TabIndex = 3;
 			this->tabPage4->Text = L"Year Revenue Statistics";
 			this->tabPage4->UseVisualStyleBackColor = true;
+			// 
+			// loadbutton
+			// 
+			this->loadbutton->Location = System::Drawing::Point(962, 384);
+			this->loadbutton->Margin = System::Windows::Forms::Padding(3, 5, 3, 5);
+			this->loadbutton->Name = L"loadbutton";
+			this->loadbutton->Size = System::Drawing::Size(242, 94);
+			this->loadbutton->TabIndex = 1;
+			this->loadbutton->Text = L"Load";
+			this->loadbutton->UseVisualStyleBackColor = true;
+			this->loadbutton->Click += gcnew System::EventHandler(this, &ManagerForm::button2_Click);
+			// 
+			// chart2
+			// 
+			chartArea1->Name = L"ChartArea1";
+			this->chart2->ChartAreas->Add(chartArea1);
+			legend1->Name = L"Legend1";
+			this->chart2->Legends->Add(legend1);
+			this->chart2->Location = System::Drawing::Point(-4, 0);
+			this->chart2->Margin = System::Windows::Forms::Padding(3, 5, 3, 5);
+			this->chart2->Name = L"chart2";
+			series1->ChartArea = L"ChartArea1";
+			series1->ChartType = System::Windows::Forms::DataVisualization::Charting::SeriesChartType::Doughnut;
+			series1->Legend = L"Legend1";
+			series1->Name = L"Revenue ";
+			this->chart2->Series->Add(series1);
+			this->chart2->Size = System::Drawing::Size(1278, 570);
+			this->chart2->TabIndex = 0;
+			this->chart2->Text = L"chart2";
+			title1->Font = (gcnew System::Drawing::Font(L"Agency FB", 24, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			title1->Name = L"Title1";
+			title1->Text = L"Revenue Of Years";
+			this->chart2->Titles->Add(title1);
 			// 
 			// tabPage3
 			// 
@@ -218,43 +266,49 @@ namespace Final {
 			this->tabPage3->Controls->Add(this->Secondbutton);
 			this->tabPage3->Controls->Add(this->Firstbutton);
 			this->tabPage3->Controls->Add(this->chart1);
-			this->tabPage3->Location = System::Drawing::Point(4, 25);
+			this->tabPage3->Location = System::Drawing::Point(4, 37);
+			this->tabPage3->Margin = System::Windows::Forms::Padding(3, 5, 3, 5);
 			this->tabPage3->Name = L"tabPage3";
-			this->tabPage3->Padding = System::Windows::Forms::Padding(3);
-			this->tabPage3->Size = System::Drawing::Size(1156, 527);
+			this->tabPage3->Padding = System::Windows::Forms::Padding(3, 5, 3, 5);
+			this->tabPage3->Size = System::Drawing::Size(1275, 570);
 			this->tabPage3->TabIndex = 2;
 			this->tabPage3->Text = L"Quarterly Revenue Statistics";
 			this->tabPage3->UseVisualStyleBackColor = true;
 			// 
 			// buttonlast
 			// 
-			this->buttonlast->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->buttonlast->Font = (gcnew System::Drawing::Font(L"Agency FB", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->buttonlast->Location = System::Drawing::Point(111, 375);
+			this->buttonlast->Location = System::Drawing::Point(125, 415);
+			this->buttonlast->Margin = System::Windows::Forms::Padding(3, 5, 3, 5);
 			this->buttonlast->Name = L"buttonlast";
-			this->buttonlast->Size = System::Drawing::Size(216, 46);
+			this->buttonlast->Size = System::Drawing::Size(218, 63);
 			this->buttonlast->TabIndex = 4;
 			this->buttonlast->Text = L"Last Quater";
 			this->buttonlast->UseVisualStyleBackColor = true;
+			this->buttonlast->Click += gcnew System::EventHandler(this, &ManagerForm::buttonlast_Click);
 			// 
 			// Midbutton
 			// 
-			this->Midbutton->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->Midbutton->Font = (gcnew System::Drawing::Font(L"Agency FB", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->Midbutton->Location = System::Drawing::Point(111, 278);
+			this->Midbutton->Location = System::Drawing::Point(125, 292);
+			this->Midbutton->Margin = System::Windows::Forms::Padding(3, 5, 3, 5);
 			this->Midbutton->Name = L"Midbutton";
-			this->Midbutton->Size = System::Drawing::Size(216, 46);
+			this->Midbutton->Size = System::Drawing::Size(218, 63);
 			this->Midbutton->TabIndex = 3;
 			this->Midbutton->Text = L"Mid Quater";
 			this->Midbutton->UseVisualStyleBackColor = true;
+			this->Midbutton->Click += gcnew System::EventHandler(this, &ManagerForm::Midbutton_Click);
 			// 
 			// Secondbutton
 			// 
-			this->Secondbutton->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->Secondbutton->Font = (gcnew System::Drawing::Font(L"Agency FB", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->Secondbutton->Location = System::Drawing::Point(111, 183);
+			this->Secondbutton->Location = System::Drawing::Point(125, 172);
+			this->Secondbutton->Margin = System::Windows::Forms::Padding(3, 5, 3, 5);
 			this->Secondbutton->Name = L"Secondbutton";
-			this->Secondbutton->Size = System::Drawing::Size(216, 46);
+			this->Secondbutton->Size = System::Drawing::Size(218, 63);
 			this->Secondbutton->TabIndex = 2;
 			this->Secondbutton->Text = L"Second Quater";
 			this->Secondbutton->UseVisualStyleBackColor = true;
@@ -262,11 +316,12 @@ namespace Final {
 			// 
 			// Firstbutton
 			// 
-			this->Firstbutton->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->Firstbutton->Font = (gcnew System::Drawing::Font(L"Agency FB", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->Firstbutton->Location = System::Drawing::Point(111, 88);
+			this->Firstbutton->Location = System::Drawing::Point(125, 57);
+			this->Firstbutton->Margin = System::Windows::Forms::Padding(3, 5, 3, 5);
 			this->Firstbutton->Name = L"Firstbutton";
-			this->Firstbutton->Size = System::Drawing::Size(216, 46);
+			this->Firstbutton->Size = System::Drawing::Size(218, 63);
 			this->Firstbutton->TabIndex = 1;
 			this->Firstbutton->Text = L"First Quater ";
 			this->Firstbutton->UseVisualStyleBackColor = true;
@@ -281,113 +336,79 @@ namespace Final {
 			this->chart1->ChartAreas->Add(chartArea2);
 			legend2->Name = L"Legend1";
 			this->chart1->Legends->Add(legend2);
-			this->chart1->Location = System::Drawing::Point(452, 24);
+			this->chart1->Location = System::Drawing::Point(480, 31);
+			this->chart1->Margin = System::Windows::Forms::Padding(3, 5, 3, 5);
 			this->chart1->Name = L"chart1";
 			this->chart1->Palette = System::Windows::Forms::DataVisualization::Charting::ChartColorPalette::Berry;
 			series2->ChartArea = L"ChartArea1";
+			series2->Font = (gcnew System::Drawing::Font(L"Agency FB", 16.2F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
 			series2->Legend = L"Legend1";
-			series2->Name = L"Series1";
+			series2->Name = L"Revenue";
 			this->chart1->Series->Add(series2);
-			this->chart1->Size = System::Drawing::Size(666, 472);
+			this->chart1->Size = System::Drawing::Size(757, 486);
 			this->chart1->TabIndex = 0;
 			this->chart1->Text = L"chart1";
+			title2->Font = (gcnew System::Drawing::Font(L"Agency FB", 19.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			title2->Name = L"Title1";
+			title2->Text = L"Revenue Of Quater";
+			this->chart1->Titles->Add(title2);
 			// 
 			// tabPage2
 			// 
-			this->tabPage2->Controls->Add(this->button2);
-			this->tabPage2->Controls->Add(this->button1);
-			this->tabPage2->Controls->Add(this->label6);
-			this->tabPage2->Controls->Add(this->label5);
-			this->tabPage2->Controls->Add(this->Phonetextbox);
-			this->tabPage2->Controls->Add(this->Customertextbox);
+			this->tabPage2->Controls->Add(this->buttonshow);
+			this->tabPage2->Controls->Add(this->buttondel);
 			this->tabPage2->Controls->Add(this->dataGridView2);
-			this->tabPage2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->tabPage2->Font = (gcnew System::Drawing::Font(L"Agency FB", 13.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->tabPage2->Location = System::Drawing::Point(4, 25);
+			this->tabPage2->Location = System::Drawing::Point(4, 37);
+			this->tabPage2->Margin = System::Windows::Forms::Padding(3, 5, 3, 5);
 			this->tabPage2->Name = L"tabPage2";
-			this->tabPage2->Padding = System::Windows::Forms::Padding(3);
-			this->tabPage2->Size = System::Drawing::Size(1156, 527);
+			this->tabPage2->Padding = System::Windows::Forms::Padding(3, 5, 3, 5);
+			this->tabPage2->Size = System::Drawing::Size(1275, 570);
 			this->tabPage2->TabIndex = 1;
 			this->tabPage2->Text = L"Customer List";
 			this->tabPage2->UseVisualStyleBackColor = true;
 			// 
-			// button2
+			// buttonshow
 			// 
-			this->button2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->buttonshow->Font = (gcnew System::Drawing::Font(L"Agency FB", 13.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->button2->Location = System::Drawing::Point(198, 376);
-			this->button2->Name = L"button2";
-			this->button2->Size = System::Drawing::Size(132, 50);
-			this->button2->TabIndex = 6;
-			this->button2->Text = L"Print";
-			this->button2->UseVisualStyleBackColor = true;
+			this->buttonshow->Location = System::Drawing::Point(722, 460);
+			this->buttonshow->Name = L"buttonshow";
+			this->buttonshow->Size = System::Drawing::Size(162, 67);
+			this->buttonshow->TabIndex = 2;
+			this->buttonshow->Text = L"Show ";
+			this->buttonshow->UseVisualStyleBackColor = true;
+			this->buttonshow->Click += gcnew System::EventHandler(this, &ManagerForm::buttonshow_Click);
 			// 
-			// button1
+			// buttondel
 			// 
-			this->button1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->buttondel->Font = (gcnew System::Drawing::Font(L"Agency FB", 13.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->button1->Location = System::Drawing::Point(39, 376);
-			this->button1->Name = L"button1";
-			this->button1->Size = System::Drawing::Size(132, 50);
-			this->button1->TabIndex = 5;
-			this->button1->Text = L"Search";
-			this->button1->UseVisualStyleBackColor = true;
-			// 
-			// label6
-			// 
-			this->label6->AutoSize = true;
-			this->label6->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->label6->Location = System::Drawing::Point(29, 220);
-			this->label6->Name = L"label6";
-			this->label6->Size = System::Drawing::Size(371, 36);
-			this->label6->TabIndex = 4;
-			this->label6->Text = L"Phone Number Customer";
-			// 
-			// label5
-			// 
-			this->label5->AutoSize = true;
-			this->label5->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->label5->Location = System::Drawing::Point(29, 72);
-			this->label5->Name = L"label5";
-			this->label5->Size = System::Drawing::Size(249, 36);
-			this->label5->TabIndex = 3;
-			this->label5->Text = L"Customer Name ";
-			// 
-			// Phonetextbox
-			// 
-			this->Phonetextbox->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->Phonetextbox->Location = System::Drawing::Point(27, 266);
-			this->Phonetextbox->Multiline = true;
-			this->Phonetextbox->Name = L"Phonetextbox";
-			this->Phonetextbox->Size = System::Drawing::Size(318, 41);
-			this->Phonetextbox->TabIndex = 2;
-			// 
-			// Customertextbox
-			// 
-			this->Customertextbox->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->Customertextbox->Location = System::Drawing::Point(27, 123);
-			this->Customertextbox->Multiline = true;
-			this->Customertextbox->Name = L"Customertextbox";
-			this->Customertextbox->Size = System::Drawing::Size(318, 41);
-			this->Customertextbox->TabIndex = 1;
+			this->buttondel->Location = System::Drawing::Point(419, 460);
+			this->buttondel->Name = L"buttondel";
+			this->buttondel->Size = System::Drawing::Size(162, 67);
+			this->buttondel->TabIndex = 1;
+			this->buttondel->Text = L"Delete Nearest";
+			this->buttondel->UseVisualStyleBackColor = true;
+			this->buttondel->Click += gcnew System::EventHandler(this, &ManagerForm::buttondel_Click);
 			// 
 			// dataGridView2
 			// 
 			this->dataGridView2->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
-			this->dataGridView2->Location = System::Drawing::Point(439, 22);
+			this->dataGridView2->Location = System::Drawing::Point(332, 36);
+			this->dataGridView2->Margin = System::Windows::Forms::Padding(3, 5, 3, 5);
 			this->dataGridView2->Name = L"dataGridView2";
 			this->dataGridView2->RowHeadersWidth = 51;
 			this->dataGridView2->RowTemplate->Height = 24;
-			this->dataGridView2->Size = System::Drawing::Size(683, 476);
+			this->dataGridView2->Size = System::Drawing::Size(649, 374);
 			this->dataGridView2->TabIndex = 0;
 			// 
 			// tabPage1
 			// 
-			this->tabPage1->Controls->Add(this->Showbutton);
+			this->tabPage1->Controls->Add(this->label8);
 			this->tabPage1->Controls->Add(this->Quantitytextbox);
 			this->tabPage1->Controls->Add(this->Capacitytextbox);
 			this->tabPage1->Controls->Add(this->IDtextbox);
@@ -399,36 +420,37 @@ namespace Final {
 			this->tabPage1->Controls->Add(this->label1);
 			this->tabPage1->Controls->Add(this->deletebutton);
 			this->tabPage1->Controls->Add(this->dataGridView1);
-			this->tabPage1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->tabPage1->Font = (gcnew System::Drawing::Font(L"Agency FB", 13.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->tabPage1->Location = System::Drawing::Point(4, 25);
+			this->tabPage1->Location = System::Drawing::Point(4, 37);
+			this->tabPage1->Margin = System::Windows::Forms::Padding(3, 5, 3, 5);
 			this->tabPage1->Name = L"tabPage1";
-			this->tabPage1->Padding = System::Windows::Forms::Padding(3);
-			this->tabPage1->Size = System::Drawing::Size(1156, 527);
+			this->tabPage1->Padding = System::Windows::Forms::Padding(3, 5, 3, 5);
+			this->tabPage1->Size = System::Drawing::Size(1275, 570);
 			this->tabPage1->TabIndex = 0;
 			this->tabPage1->Text = L"Edit Restaurent ";
 			this->tabPage1->UseVisualStyleBackColor = true;
 			this->tabPage1->Click += gcnew System::EventHandler(this, &ManagerForm::tabPage1_Click);
 			// 
-			// Showbutton
+			// label8
 			// 
-			this->Showbutton->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->label8->AutoSize = true;
+			this->label8->Font = (gcnew System::Drawing::Font(L"Agency FB", 28.2F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->Showbutton->Location = System::Drawing::Point(459, 18);
-			this->Showbutton->Name = L"Showbutton";
-			this->Showbutton->Size = System::Drawing::Size(153, 47);
-			this->Showbutton->TabIndex = 15;
-			this->Showbutton->Text = L"Show All";
-			this->Showbutton->UseVisualStyleBackColor = true;
-			this->Showbutton->Click += gcnew System::EventHandler(this, &ManagerForm::Showbutton_Click);
+			this->label8->Location = System::Drawing::Point(108, 36);
+			this->label8->Name = L"label8";
+			this->label8->Size = System::Drawing::Size(292, 57);
+			this->label8->TabIndex = 15;
+			this->label8->Text = L"Make Restaurant";
 			// 
 			// Quantitytextbox
 			// 
 			this->Quantitytextbox->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->Quantitytextbox->Location = System::Drawing::Point(79, 338);
+			this->Quantitytextbox->Location = System::Drawing::Point(83, 452);
+			this->Quantitytextbox->Margin = System::Windows::Forms::Padding(3, 5, 3, 5);
 			this->Quantitytextbox->Name = L"Quantitytextbox";
-			this->Quantitytextbox->Size = System::Drawing::Size(321, 41);
+			this->Quantitytextbox->Size = System::Drawing::Size(361, 41);
 			this->Quantitytextbox->TabIndex = 14;
 			this->Quantitytextbox->TextChanged += gcnew System::EventHandler(this, &ManagerForm::Quantitytextbox_TextChanged);
 			// 
@@ -436,9 +458,10 @@ namespace Final {
 			// 
 			this->Capacitytextbox->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->Capacitytextbox->Location = System::Drawing::Point(79, 247);
+			this->Capacitytextbox->Location = System::Drawing::Point(82, 356);
+			this->Capacitytextbox->Margin = System::Windows::Forms::Padding(3, 5, 3, 5);
 			this->Capacitytextbox->Name = L"Capacitytextbox";
-			this->Capacitytextbox->Size = System::Drawing::Size(321, 41);
+			this->Capacitytextbox->Size = System::Drawing::Size(361, 41);
 			this->Capacitytextbox->TabIndex = 13;
 			this->Capacitytextbox->TextChanged += gcnew System::EventHandler(this, &ManagerForm::Capacitytextbox_TextChanged);
 			// 
@@ -446,35 +469,38 @@ namespace Final {
 			// 
 			this->IDtextbox->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->IDtextbox->Location = System::Drawing::Point(80, 71);
+			this->IDtextbox->Location = System::Drawing::Point(83, 167);
+			this->IDtextbox->Margin = System::Windows::Forms::Padding(3, 5, 3, 5);
 			this->IDtextbox->Name = L"IDtextbox";
-			this->IDtextbox->Size = System::Drawing::Size(321, 41);
+			this->IDtextbox->Size = System::Drawing::Size(361, 41);
 			this->IDtextbox->TabIndex = 12;
 			this->IDtextbox->TextChanged += gcnew System::EventHandler(this, &ManagerForm::IDtextbox_TextChanged);
 			// 
 			// Typecombobox
 			// 
 			this->Typecombobox->DropDownStyle = System::Windows::Forms::ComboBoxStyle::DropDownList;
-			this->Typecombobox->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->Typecombobox->Font = (gcnew System::Drawing::Font(L"Agency FB", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->Typecombobox->FormattingEnabled = true;
 			this->Typecombobox->Items->AddRange(gcnew cli::array< System::Object^  >(6) {
 				L"Buffet Restaurant", L"Sea Food Restaurant",
 					L"Traditional Vietnamese Restaurant", L"Wedding Restaurant ", L"Event Restaurant", L""
 			});
-			this->Typecombobox->Location = System::Drawing::Point(79, 155);
+			this->Typecombobox->Location = System::Drawing::Point(84, 257);
+			this->Typecombobox->Margin = System::Windows::Forms::Padding(3, 5, 3, 5);
 			this->Typecombobox->Name = L"Typecombobox";
-			this->Typecombobox->Size = System::Drawing::Size(322, 44);
+			this->Typecombobox->Size = System::Drawing::Size(362, 44);
 			this->Typecombobox->TabIndex = 11;
 			this->Typecombobox->SelectedIndexChanged += gcnew System::EventHandler(this, &ManagerForm::Typecombobox_SelectedIndexChanged);
 			// 
 			// donebutton
 			// 
-			this->donebutton->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->donebutton->Font = (gcnew System::Drawing::Font(L"Agency FB", 13.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->donebutton->Location = System::Drawing::Point(258, 420);
+			this->donebutton->Location = System::Drawing::Point(1087, 480);
+			this->donebutton->Margin = System::Windows::Forms::Padding(3, 5, 3, 5);
 			this->donebutton->Name = L"donebutton";
-			this->donebutton->Size = System::Drawing::Size(161, 45);
+			this->donebutton->Size = System::Drawing::Size(153, 59);
 			this->donebutton->TabIndex = 10;
 			this->donebutton->Text = L"Done";
 			this->donebutton->UseVisualStyleBackColor = true;
@@ -483,66 +509,69 @@ namespace Final {
 			// label4
 			// 
 			this->label4->AutoSize = true;
-			this->label4->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->label4->Font = (gcnew System::Drawing::Font(L"Agency FB", 13.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label4->Location = System::Drawing::Point(76, 306);
+			this->label4->Location = System::Drawing::Point(80, 419);
 			this->label4->Name = L"label4";
-			this->label4->Size = System::Drawing::Size(207, 36);
+			this->label4->Size = System::Drawing::Size(115, 28);
 			this->label4->TabIndex = 9;
 			this->label4->Text = L"Quantity Staff";
 			// 
 			// label3
 			// 
 			this->label3->AutoSize = true;
-			this->label3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->label3->Font = (gcnew System::Drawing::Font(L"Agency FB", 13.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label3->Location = System::Drawing::Point(76, 215);
+			this->label3->Location = System::Drawing::Point(82, 323);
 			this->label3->Name = L"label3";
-			this->label3->Size = System::Drawing::Size(138, 36);
+			this->label3->Size = System::Drawing::Size(78, 28);
 			this->label3->TabIndex = 8;
 			this->label3->Text = L"Capacity";
 			// 
 			// label2
 			// 
 			this->label2->AutoSize = true;
-			this->label2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->label2->Font = (gcnew System::Drawing::Font(L"Agency FB", 13.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label2->Location = System::Drawing::Point(77, 123);
+			this->label2->Location = System::Drawing::Point(84, 224);
 			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(85, 36);
+			this->label2->Size = System::Drawing::Size(50, 28);
 			this->label2->TabIndex = 7;
 			this->label2->Text = L"Type";
 			// 
 			// label1
 			// 
 			this->label1->AutoSize = true;
-			this->label1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->label1->Font = (gcnew System::Drawing::Font(L"Agency FB", 13.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label1->Location = System::Drawing::Point(77, 34);
+			this->label1->Location = System::Drawing::Point(80, 134);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(210, 36);
+			this->label1->Size = System::Drawing::Size(115, 28);
 			this->label1->TabIndex = 6;
 			this->label1->Text = L"ID Restaurant";
 			// 
 			// deletebutton
 			// 
-			this->deletebutton->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->deletebutton->Font = (gcnew System::Drawing::Font(L"Agency FB", 13.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->deletebutton->Location = System::Drawing::Point(62, 420);
+			this->deletebutton->Location = System::Drawing::Point(885, 480);
+			this->deletebutton->Margin = System::Windows::Forms::Padding(3, 5, 3, 5);
 			this->deletebutton->Name = L"deletebutton";
-			this->deletebutton->Size = System::Drawing::Size(161, 45);
+			this->deletebutton->Size = System::Drawing::Size(153, 59);
 			this->deletebutton->TabIndex = 5;
 			this->deletebutton->Text = L"Delete";
 			this->deletebutton->UseVisualStyleBackColor = true;
+			this->deletebutton->Click += gcnew System::EventHandler(this, &ManagerForm::deletebutton_Click);
 			// 
 			// dataGridView1
 			// 
 			this->dataGridView1->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
-			this->dataGridView1->Location = System::Drawing::Point(459, 86);
+			this->dataGridView1->Location = System::Drawing::Point(527, 36);
+			this->dataGridView1->Margin = System::Windows::Forms::Padding(3, 5, 3, 5);
 			this->dataGridView1->Name = L"dataGridView1";
 			this->dataGridView1->RowHeadersWidth = 51;
 			this->dataGridView1->RowTemplate->Height = 24;
-			this->dataGridView1->Size = System::Drawing::Size(669, 406);
+			this->dataGridView1->Size = System::Drawing::Size(713, 413);
 			this->dataGridView1->TabIndex = 4;
 			this->dataGridView1->CellContentClick += gcnew System::Windows::Forms::DataGridViewCellEventHandler(this, &ManagerForm::dataGridView1_CellContentClick);
 			// 
@@ -553,24 +582,24 @@ namespace Final {
 			this->tabControl1->Controls->Add(this->tabPage3);
 			this->tabControl1->Controls->Add(this->tabPage4);
 			this->tabControl1->Controls->Add(this->Historytab);
-			this->tabControl1->Location = System::Drawing::Point(-3, 1);
+			this->tabControl1->Location = System::Drawing::Point(-3, 2);
+			this->tabControl1->Margin = System::Windows::Forms::Padding(3, 5, 3, 5);
 			this->tabControl1->Name = L"tabControl1";
 			this->tabControl1->SelectedIndex = 0;
-			this->tabControl1->Size = System::Drawing::Size(1164, 556);
+			this->tabControl1->Size = System::Drawing::Size(1283, 611);
 			this->tabControl1->TabIndex = 9;
 			this->tabControl1->SelectedIndexChanged += gcnew System::EventHandler(this, &ManagerForm::tabControl1_SelectedIndexChanged);
 			// 
 			// Historytab
 			// 
 			this->Historytab->Controls->Add(this->label7);
-			this->Historytab->Controls->Add(this->textBox1);
-			this->Historytab->Controls->Add(this->button4);
-			this->Historytab->Controls->Add(this->button3);
+			this->Historytab->Controls->Add(this->Showbutton);
 			this->Historytab->Controls->Add(this->dataGridView3);
-			this->Historytab->Location = System::Drawing::Point(4, 25);
+			this->Historytab->Location = System::Drawing::Point(4, 37);
+			this->Historytab->Margin = System::Windows::Forms::Padding(3, 5, 3, 5);
 			this->Historytab->Name = L"Historytab";
-			this->Historytab->Padding = System::Windows::Forms::Padding(3);
-			this->Historytab->Size = System::Drawing::Size(1156, 527);
+			this->Historytab->Padding = System::Windows::Forms::Padding(3, 5, 3, 5);
+			this->Historytab->Size = System::Drawing::Size(1275, 570);
 			this->Historytab->TabIndex = 4;
 			this->Historytab->Text = L"History";
 			this->Historytab->UseVisualStyleBackColor = true;
@@ -578,68 +607,53 @@ namespace Final {
 			// label7
 			// 
 			this->label7->AutoSize = true;
-			this->label7->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->label7->Font = (gcnew System::Drawing::Font(L"Agency FB", 28.2F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label7->Location = System::Drawing::Point(116, 103);
+			this->label7->Location = System::Drawing::Point(122, 119);
 			this->label7->Name = L"label7";
-			this->label7->Size = System::Drawing::Size(206, 36);
-			this->label7->TabIndex = 4;
-			this->label7->Text = L"Booking Date";
+			this->label7->Size = System::Drawing::Size(150, 57);
+			this->label7->TabIndex = 2;
+			this->label7->Text = L"History ";
 			// 
-			// textBox1
+			// Showbutton
 			// 
-			this->textBox1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->Showbutton->Font = (gcnew System::Drawing::Font(L"Agency FB", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->textBox1->Location = System::Drawing::Point(71, 159);
-			this->textBox1->Multiline = true;
-			this->textBox1->Name = L"textBox1";
-			this->textBox1->Size = System::Drawing::Size(236, 44);
-			this->textBox1->TabIndex = 3;
-			// 
-			// button4
-			// 
-			this->button4->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->button4->Location = System::Drawing::Point(109, 346);
-			this->button4->Name = L"button4";
-			this->button4->Size = System::Drawing::Size(147, 57);
-			this->button4->TabIndex = 2;
-			this->button4->Text = L"Print";
-			this->button4->UseVisualStyleBackColor = true;
-			// 
-			// button3
-			// 
-			this->button3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->button3->Location = System::Drawing::Point(109, 254);
-			this->button3->Name = L"button3";
-			this->button3->Size = System::Drawing::Size(147, 57);
-			this->button3->TabIndex = 1;
-			this->button3->Text = L"Search";
-			this->button3->UseVisualStyleBackColor = true;
+			this->Showbutton->Location = System::Drawing::Point(93, 237);
+			this->Showbutton->Margin = System::Windows::Forms::Padding(3, 5, 3, 5);
+			this->Showbutton->Name = L"Showbutton";
+			this->Showbutton->Size = System::Drawing::Size(194, 69);
+			this->Showbutton->TabIndex = 1;
+			this->Showbutton->Text = L"Show";
+			this->Showbutton->UseVisualStyleBackColor = true;
 			// 
 			// dataGridView3
 			// 
 			this->dataGridView3->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
-			this->dataGridView3->Location = System::Drawing::Point(370, 17);
+			this->dataGridView3->Location = System::Drawing::Point(411, 53);
+			this->dataGridView3->Margin = System::Windows::Forms::Padding(3, 5, 3, 5);
 			this->dataGridView3->Name = L"dataGridView3";
 			this->dataGridView3->RowHeadersWidth = 51;
 			this->dataGridView3->RowTemplate->Height = 24;
-			this->dataGridView3->Size = System::Drawing::Size(764, 476);
+			this->dataGridView3->Size = System::Drawing::Size(829, 473);
 			this->dataGridView3->TabIndex = 0;
 			// 
 			// ManagerForm
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
+			this->AutoScaleDimensions = System::Drawing::SizeF(9, 28);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(1155, 549);
+			this->ClientSize = System::Drawing::Size(1281, 614);
 			this->Controls->Add(this->tabControl1);
+			this->Font = (gcnew System::Drawing::Font(L"Agency FB", 13.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->Margin = System::Windows::Forms::Padding(3, 5, 3, 5);
 			this->Name = L"ManagerForm";
 			this->Text = L"ManagerForm";
+			this->tabPage4->ResumeLayout(false);
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->chart2))->EndInit();
 			this->tabPage3->ResumeLayout(false);
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->chart1))->EndInit();
 			this->tabPage2->ResumeLayout(false);
-			this->tabPage2->PerformLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView2))->EndInit();
 			this->tabPage1->ResumeLayout(false);
 			this->tabPage1->PerformLayout();
@@ -717,9 +731,135 @@ private: System::Void Showbutton_Click(System::Object^ sender, System::EventArgs
 }
 private: System::Void tabControl1_SelectedIndexChanged(System::Object^ sender, System::EventArgs^ e) {
 }
-private: System::Void Firstbutton_Click(System::Object^ sender, System::EventArgs^ e) {
+private: System::Void Firstbutton_Click(System::Object^ sender, System::EventArgs^ e) 
+{
+	double a = FinalProfitbymoth(History, 1, 1, 1);
+	double b = FinalProfitbymoth(History, 2, 2, 2);
+	double c = FinalProfitbymoth(History, 3, 3, 3);
+
+	chart1->Series["Revenue"]->Points->AddXY("Month 1", a);
+	chart1->Series["Revenue"]->Points->AddXY("Month 2", b);
+	chart1->Series["Revenue"]->Points->AddXY("Month 3", c);
+
 }
-private: System::Void Secondbutton_Click(System::Object^ sender, System::EventArgs^ e) {
+private: System::Void Secondbutton_Click(System::Object^ sender, System::EventArgs^ e) 
+{
+	double a = FinalProfitbymoth(History, 4, 4, 4);
+	double b = FinalProfitbymoth(History, 5, 5, 5);
+	double c = FinalProfitbymoth(History, 6, 6, 6);
+
+	// Clear dữ liệu cũ của button trước
+	chart1->Series["Revenue"]->Points->Clear();
+
+	chart1->Series["Revenue"]->Points->AddXY("Month 4", a);
+	chart1->Series["Revenue"]->Points->AddXY("Month 5", b);
+	chart1->Series["Revenue"]->Points->AddXY("Month 6", c);
+}
+private: System::Void Midbutton_Click(System::Object^ sender, System::EventArgs^ e) 
+{
+	double a = FinalProfitbymoth(History, 7, 7, 7);
+	double b = FinalProfitbymoth(History, 8, 8, 8);
+	double c = FinalProfitbymoth(History, 9, 9, 9);
+	chart1->Series["Revenue"]->Points->Clear();
+
+
+	chart1->Series["Revenue"]->Points->AddXY("Month 7", a);
+	chart1->Series["Revenue"]->Points->AddXY("Month 8", b);
+	chart1->Series["Revenue"]->Points->AddXY("Month 9", c);
+}
+private: System::Void buttonlast_Click(System::Object^ sender, System::EventArgs^ e) 
+{
+	double a = FinalProfitbymoth(History, 10, 10, 10);
+	double b = FinalProfitbymoth(History, 11, 11, 11);
+	double c = FinalProfitbymoth(History, 12, 12, 12);
+	chart1->Series["Revenue"]->Points->Clear();
+
+	chart1->Series["Revenue"]->Points->AddXY("Month 10", a);
+	chart1->Series["Revenue"]->Points->AddXY("Month 11", b);
+	chart1->Series["Revenue"]->Points->AddXY("Month 12", c);
+}
+private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) 
+{
+	double a = FinalProfitbymoth(History, 1, 2, 3) + FinalProfitbymoth(History, 4, 5, 6) + FinalProfitbymoth(History, 7, 8, 9) + FinalProfitbymoth(History, 10, 11, 12);
+
+	chart2->Series["Revenuenut"]->Points->AddXY("Year", a);
+}
+private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) 
+{
+	ToArrayHistory(History, HistoryArr);
+
+}
+private: System::Void buttondel_Click(System::Object^ sender, System::EventArgs^ e) 
+{
+	
+}
+private: System::Void buttonshow_Click(System::Object^ sender, System::EventArgs^ e) 
+{
+	ToArrayHistory(History, HistoryArr);
+
+	if (dataGridView2->Columns->Count == 0)
+	{
+		dataGridView2->Columns->Add("cusname", "Cusname");
+		dataGridView2->Columns->Add("phonenumber", "Phonenumber");
+		dataGridView2->Columns->Add("tableid", "Tableid");
+
+	}
+
+	dataGridView2->Columns[0]->Name = "cusname";
+	dataGridView2->Columns[1]->Name = "phonenumber";
+	dataGridView2->Columns[2]->Name = "tableid";
+
+	ToArrayHistory(History, HistoryArr);
+
+	for (int i = 0; i <= 30; i++)
+	{
+		dataGridView2->Rows->Add();
+		dataGridView2->Rows[i]->Cells[0]->Value = gcnew String(HistoryArr[i].cusname.c_str());
+		dataGridView2->Rows[i]->Cells[1]->Value = gcnew String(HistoryArr[i].phonenumber.c_str());
+		dataGridView2->Rows[i]->Cells[1]->Value = gcnew String(HistoryArr[i].tableid.c_str());
+	}
+}
+private: System::Void deletebutton_Click(System::Object^ sender, System::EventArgs^ e) 
+{
+	delete[] ChainArr;
+	string id = toStandardString(IDtextbox->Text);
+	string type = toStandardString(Typecombobox->Text);
+	string Capacity = toStandardString(Capacitytextbox->Text);
+	string Quantity = toStandardString(Quantitytextbox->Text);
+	int intCa = stoi(Capacity);
+	int intQa = stoi(Quantity);
+
+	Chain.removeByID(id);
+	
+	IDtextbox->Clear();
+	Capacitytextbox->Clear();
+	Quantitytextbox->Clear();
+
+	if (dataGridView1->Columns->Count == 0)
+	{
+		dataGridView1->Columns->Add("id", "ID");
+		dataGridView1->Columns->Add("type", "Type");
+		dataGridView1->Columns->Add("Capacity", "Capacity");
+		dataGridView1->Columns->Add("Quantity", "Quantity");
+	}
+
+	dataGridView1->Columns[0]->Name = "id";
+	dataGridView1->Columns[1]->Name = "type";
+	dataGridView1->Columns[2]->Name = "Capacity";
+	dataGridView1->Columns[3]->Name = "Quantity";
+
+	ToArray(Chain, ChainArr);
+
+	for (int i = 0; i <= 30; i++)
+	{
+		dataGridView1->Rows->Add();
+		dataGridView1->Rows[i]->Cells[0]->Value = gcnew String(ChainArr[i].id.c_str());
+		dataGridView1->Rows[i]->Cells[1]->Value = gcnew String(ChainArr[i].type.c_str());
+		dataGridView1->Rows[i]->Cells[2]->Value = ChainArr[i].Capacity;
+		dataGridView1->Rows[i]->Cells[3]->Value = ChainArr[i].staff;
+	}
+
+
 }
 };
 }

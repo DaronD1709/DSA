@@ -26,7 +26,7 @@ public:
         head = nullptr;
     }
 
-    // Function to insert a node at the end of the list
+   
     void insert(T val)
     {
         Node<T>* newNode = new Node<T>(val);
@@ -44,7 +44,7 @@ public:
         temp->next = newNode;
     }
 
-    // Function to find a node by its ID
+
     Node<T>* findNodeByID(string id)
     {
         Node<T>* temp = head;
@@ -52,14 +52,14 @@ public:
         {
             if (temp->data.id == id)
             {
-                return temp; // Return the node if found
+                return temp; 
             }
             temp = temp->next;
         }
-        return nullptr; // Return nullptr if node not found
+        return nullptr; 
     }
 
-    // Function to set statement to false for a specific table ID
+    
     void setStatementFalse(string id)
     {
         Node<T>* node = findNodeByID(id);
@@ -109,7 +109,7 @@ public:
     {
         if (head == nullptr || head->next == nullptr)
         {
-            // The list is empty or has only one element, no need to sort
+           
             return;
         }
 
@@ -126,7 +126,7 @@ public:
             {
                 if (ptr1->data.profit > ptr1->next->data.profit)
                 {
-                    // Swap the data of the nodes
+                    
                     T temp = ptr1->data;
                     ptr1->data = ptr1->next->data;
                     ptr1->next->data = temp;
@@ -139,5 +139,36 @@ public:
             lptr = ptr1;
         } while (swapped);
     }
+
+    void removeByID(string id)
+    {
+        Node<T>* current = head;
+        Node<T>* prev = nullptr;
+        if (current != nullptr && current->data.id == id)
+        {
+            head = current->next;
+            delete current;
+            return;
+        }
+
+
+        while (current != nullptr && current->data.id != id)
+        {
+            prev = current;
+            current = current->next;
+        }
+
+   
+        if (current == nullptr)
+        {
+            cout << "Node with ID " << id << " not found in the list." << endl;
+            return;
+        }
+
+
+        prev->next = current->next;
+        delete current;
+    }
+    
 };
 
