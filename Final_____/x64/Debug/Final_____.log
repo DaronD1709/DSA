@@ -1,9 +1,7 @@
 ﻿  Main.cpp
-C:\Users\HALO\Desktop\DSA\Github\DSA\Final_____\File.h(14,22): warning C4566: character represented by universal-character-name '\u1EC3' cannot be represented in the current code page (1252)
-C:\Users\HALO\Desktop\DSA\Github\DSA\Final_____\File.h(14,22): warning C4566: character represented by universal-character-name '\u1EDF' cannot be represented in the current code page (1252)
-C:\Users\HALO\Desktop\DSA\Github\DSA\Final_____\File.h(35,17): warning C4566: character represented by universal-character-name '\u1EC3' cannot be represented in the current code page (1252)
-C:\Users\HALO\Desktop\DSA\Github\DSA\Final_____\File.h(35,17): warning C4566: character represented by universal-character-name '\u1EDF' cannot be represented in the current code page (1252)
-  .NETFramework,Version=v4.8.AssemblyAttributes.cpp
-  Generating Code...
+F:\DATA str\Final_____\Final_____\File.h(14,22): warning C4566: character represented by universal-character-name '\u1EC3' cannot be represented in the current code page (1252)
+F:\DATA str\Final_____\Final_____\File.h(14,22): warning C4566: character represented by universal-character-name '\u1EDF' cannot be represented in the current code page (1252)
+F:\DATA str\Final_____\Final_____\File.h(35,17): warning C4566: character represented by universal-character-name '\u1EC3' cannot be represented in the current code page (1252)
+F:\DATA str\Final_____\Final_____\File.h(35,17): warning C4566: character represented by universal-character-name '\u1EDF' cannot be represented in the current code page (1252)
   Main.obj : MSIL module encountered; incremental linking is disabled for MSIL; performing full link
-  Final_____.vcxproj -> C:\Users\HALO\Desktop\DSA\Github\DSA\x64\Debug\Final_____.exe
+  Final_____.vcxproj -> F:\DATA str\Final_____\x64\Debug\Final_____.exe

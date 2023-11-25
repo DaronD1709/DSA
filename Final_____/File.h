@@ -4,7 +4,7 @@
 #include "_lib.h"
 #include "Fuction.h"
 
-string fname = "C://Users//HALO//Desktop//DSA//DSA//Final_____//Final_____//RestauranList.csv";
+string fname = "F://DATA str//Final_____//RestauranList.csv";
 
 // viet de tu Arr -> File
 void writeRestaurantToCSV(string filename, Restaurant ChainArr[])
@@ -47,7 +47,7 @@ void readRestaurantFromCSV(string filename)
     while (getline(file, line)) 
     {
         s.clear();
-
+        
         s.str(line);
 
         getline(s, word, ',');

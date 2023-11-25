@@ -15,7 +15,6 @@ using namespace System::Windows::Forms;
 
 int main()
 {
-
 	readRestaurantFromCSV(fname);
 	// open form
 	Application::EnableVisualStyles();
