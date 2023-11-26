@@ -37,7 +37,7 @@ Record HistoryArr[100];
         }
     }
     // datban
-    void StamentSetTable(LinkedList<Restaurant> Chain, Stack<Record>& History, double& Totalmoney, string Resid, string phonenumber,string cusname, int Tablenumber, int cusnum, int dayT, int mothT, int yearT)
+    void StamentSetTable(LinkedList<Restaurant> Chain, Stack<Record>& History, double& Totalmoney, string Resid, string phonenumber,string cusname, string Tableid, int cusnum, int dayT, int mothT, int yearT)
     {
         Restaurant a;
         a.Capacity = Chain.findNodeByID(Resid)->data.Capacity;
@@ -45,8 +45,12 @@ Record HistoryArr[100];
         for (int i = 1; i <= MaxTable; i++)
         {
             a.Tablearr[i] = Chain.findNodeByID(Resid)->data.Tablearr[i];
+            if (a.Tablearr[i].id == Tableid)
+            {
+                a.Tablearr[i].statement = true;
+            }
         }
-        a.Tablearr[Tablenumber].statement = true;
+
         a.type = Chain.findNodeByID(Resid)->data.type;
         a.profit = Chain.findNodeByID(Resid)->data.profit + cusnum * moneyperone;
         a.staff = Chain.findNodeByID(Resid)->data.staff;
@@ -61,7 +65,7 @@ Record HistoryArr[100];
         u.dayT = dayT;
         u.money = cusnum * moneyperone;
         u.mothT = mothT;
-        u.tableid = to_string(Tablenumber) + Resid;
+        u.tableid = Tableid;
         u.yearT = yearT;
         History.push(u);
 
@@ -70,7 +74,7 @@ Record HistoryArr[100];
     }
 
     // huyban
-    void StamentDeleteTable(LinkedList<Restaurant>& Chain, Stack<Record>& History, double& Totalmoney, string Resid,string cusname,string phonenumber, int Tablenumber, int cusnum, int dayT, int mothT, int yearT)
+    void StamentDeleteTable(LinkedList<Restaurant>& Chain, Stack<Record>& History, double& Totalmoney, string Resid,string cusname,string phonenumber, string Tableid, int cusnum, int dayT, int mothT, int yearT)
     {
         Restaurant a;
         a.Capacity = Chain.findNodeByID(Resid)->data.Capacity;
@@ -78,8 +82,12 @@ Record HistoryArr[100];
         for (int i = 1; i <= MaxTable; i++)
         {
             a.Tablearr[i] = Chain.findNodeByID(Resid)->data.Tablearr[i];
+            if (a.Tablearr[i].id == Tableid)
+            {
+                a.Tablearr[i].statement = false;
+            }
         }
-        a.Tablearr[Tablenumber].statement = false;
+
         a.type = Chain.findNodeByID(Resid)->data.type;
         a.profit = Chain.findNodeByID(Resid)->data.profit - cusnum * moneyperone;
         a.staff = Chain.findNodeByID(Resid)->data.staff;
@@ -94,7 +102,7 @@ Record HistoryArr[100];
         u.money = -(cusnum * moneyperone);
         u.dayT = dayT;
         u.mothT = mothT;
-        u.tableid = to_string(Tablenumber) + Resid;
+        u.tableid = Tableid;
         u.yearT = yearT;
         History.push(u);
 

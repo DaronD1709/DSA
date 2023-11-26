@@ -69,7 +69,7 @@ namespace Final {
 	private: System::Windows::Forms::Label^ label3;
 	private: System::Windows::Forms::Label^ label2;
 	private: System::Windows::Forms::Label^ label1;
-	private: System::Windows::Forms::Button^ deletebutton;
+
 	private: System::Windows::Forms::DataGridView^ dataGridView1;
 	private: System::Windows::Forms::TabControl^ tabControl1;
 	private: System::Windows::Forms::TabPage^ Historytab;
@@ -192,7 +192,6 @@ namespace Final {
 			this->label3 = (gcnew System::Windows::Forms::Label());
 			this->label2 = (gcnew System::Windows::Forms::Label());
 			this->label1 = (gcnew System::Windows::Forms::Label());
-			this->deletebutton = (gcnew System::Windows::Forms::Button());
 			this->dataGridView1 = (gcnew System::Windows::Forms::DataGridView());
 			this->tabControl1 = (gcnew System::Windows::Forms::TabControl());
 			this->Historytab = (gcnew System::Windows::Forms::TabPage());
@@ -398,12 +397,12 @@ namespace Final {
 			// dataGridView2
 			// 
 			this->dataGridView2->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
-			this->dataGridView2->Location = System::Drawing::Point(332, 36);
+			this->dataGridView2->Location = System::Drawing::Point(314, 26);
 			this->dataGridView2->Margin = System::Windows::Forms::Padding(3, 5, 3, 5);
 			this->dataGridView2->Name = L"dataGridView2";
 			this->dataGridView2->RowHeadersWidth = 51;
 			this->dataGridView2->RowTemplate->Height = 24;
-			this->dataGridView2->Size = System::Drawing::Size(649, 374);
+			this->dataGridView2->Size = System::Drawing::Size(689, 396);
 			this->dataGridView2->TabIndex = 0;
 			// 
 			// tabPage1
@@ -418,7 +417,6 @@ namespace Final {
 			this->tabPage1->Controls->Add(this->label3);
 			this->tabPage1->Controls->Add(this->label2);
 			this->tabPage1->Controls->Add(this->label1);
-			this->tabPage1->Controls->Add(this->deletebutton);
 			this->tabPage1->Controls->Add(this->dataGridView1);
 			this->tabPage1->Font = (gcnew System::Drawing::Font(L"Agency FB", 13.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
@@ -497,7 +495,7 @@ namespace Final {
 			// 
 			this->donebutton->Font = (gcnew System::Drawing::Font(L"Agency FB", 13.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->donebutton->Location = System::Drawing::Point(1087, 480);
+			this->donebutton->Location = System::Drawing::Point(819, 485);
 			this->donebutton->Margin = System::Windows::Forms::Padding(3, 5, 3, 5);
 			this->donebutton->Name = L"donebutton";
 			this->donebutton->Size = System::Drawing::Size(153, 59);
@@ -550,19 +548,6 @@ namespace Final {
 			this->label1->TabIndex = 6;
 			this->label1->Text = L"ID Restaurant";
 			// 
-			// deletebutton
-			// 
-			this->deletebutton->Font = (gcnew System::Drawing::Font(L"Agency FB", 13.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->deletebutton->Location = System::Drawing::Point(885, 480);
-			this->deletebutton->Margin = System::Windows::Forms::Padding(3, 5, 3, 5);
-			this->deletebutton->Name = L"deletebutton";
-			this->deletebutton->Size = System::Drawing::Size(153, 59);
-			this->deletebutton->TabIndex = 5;
-			this->deletebutton->Text = L"Delete";
-			this->deletebutton->UseVisualStyleBackColor = true;
-			this->deletebutton->Click += gcnew System::EventHandler(this, &ManagerForm::deletebutton_Click);
-			// 
 			// dataGridView1
 			// 
 			this->dataGridView1->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
@@ -609,7 +594,7 @@ namespace Final {
 			this->label7->AutoSize = true;
 			this->label7->Font = (gcnew System::Drawing::Font(L"Agency FB", 28.2F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label7->Location = System::Drawing::Point(122, 119);
+			this->label7->Location = System::Drawing::Point(117, 159);
 			this->label7->Name = L"label7";
 			this->label7->Size = System::Drawing::Size(150, 57);
 			this->label7->TabIndex = 2;
@@ -619,13 +604,14 @@ namespace Final {
 			// 
 			this->Showbutton->Font = (gcnew System::Drawing::Font(L"Agency FB", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->Showbutton->Location = System::Drawing::Point(93, 237);
+			this->Showbutton->Location = System::Drawing::Point(88, 306);
 			this->Showbutton->Margin = System::Windows::Forms::Padding(3, 5, 3, 5);
 			this->Showbutton->Name = L"Showbutton";
 			this->Showbutton->Size = System::Drawing::Size(194, 69);
 			this->Showbutton->TabIndex = 1;
 			this->Showbutton->Text = L"Show";
 			this->Showbutton->UseVisualStyleBackColor = true;
+			this->Showbutton->Click += gcnew System::EventHandler(this, &ManagerForm::Showbutton_Click_1);
 			// 
 			// dataGridView3
 			// 
@@ -723,7 +709,9 @@ private: System::Void Capacitytextbox_TextChanged(System::Object^ sender, System
 }
 private: System::Void Quantitytextbox_TextChanged(System::Object^ sender, System::EventArgs^ e) {
 }
-private: System::Void dataGridView1_CellContentClick(System::Object^ sender, System::Windows::Forms::DataGridViewCellEventArgs^ e) {
+private: System::Void dataGridView1_CellContentClick(System::Object^ sender, System::Windows::Forms::DataGridViewCellEventArgs^ e) 
+{
+
 }
 private: System::Void Showbutton_Click(System::Object^ sender, System::EventArgs^ e) 
 {
@@ -821,44 +809,11 @@ private: System::Void buttonshow_Click(System::Object^ sender, System::EventArgs
 }
 private: System::Void deletebutton_Click(System::Object^ sender, System::EventArgs^ e) 
 {
-	delete[] ChainArr;
-	string id = toStandardString(IDtextbox->Text);
-	string type = toStandardString(Typecombobox->Text);
-	string Capacity = toStandardString(Capacitytextbox->Text);
-	string Quantity = toStandardString(Quantitytextbox->Text);
-	int intCa = stoi(Capacity);
-	int intQa = stoi(Quantity);
-
-	Chain.removeByID(id);
 	
-	IDtextbox->Clear();
-	Capacitytextbox->Clear();
-	Quantitytextbox->Clear();
 
-	if (dataGridView1->Columns->Count == 0)
-	{
-		dataGridView1->Columns->Add("id", "ID");
-		dataGridView1->Columns->Add("type", "Type");
-		dataGridView1->Columns->Add("Capacity", "Capacity");
-		dataGridView1->Columns->Add("Quantity", "Quantity");
-	}
-
-	dataGridView1->Columns[0]->Name = "id";
-	dataGridView1->Columns[1]->Name = "type";
-	dataGridView1->Columns[2]->Name = "Capacity";
-	dataGridView1->Columns[3]->Name = "Quantity";
-
-	ToArray(Chain, ChainArr);
-
-	for (int i = 0; i <= 30; i++)
-	{
-		dataGridView1->Rows->Add();
-		dataGridView1->Rows[i]->Cells[0]->Value = gcnew String(ChainArr[i].id.c_str());
-		dataGridView1->Rows[i]->Cells[1]->Value = gcnew String(ChainArr[i].type.c_str());
-		dataGridView1->Rows[i]->Cells[2]->Value = ChainArr[i].Capacity;
-		dataGridView1->Rows[i]->Cells[3]->Value = ChainArr[i].staff;
-	}
-
+}
+private: System::Void Showbutton_Click_1(System::Object^ sender, System::EventArgs^ e) 
+{
 
 }
 };

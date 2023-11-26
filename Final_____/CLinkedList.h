@@ -105,6 +105,9 @@ public:
 
         }
     }
+
+    // Sort Ranking of Restaurants 
+    
     void bubbleSort()
     {
         if (head == nullptr || head->next == nullptr)
@@ -144,13 +147,6 @@ public:
     {
         Node<T>* current = head;
         Node<T>* prev = nullptr;
-        if (current != nullptr && current->data.id == id)
-        {
-            head = current->next;
-            delete current;
-            return;
-        }
-
 
         while (current != nullptr && current->data.id != id)
         {
@@ -158,17 +154,25 @@ public:
             current = current->next;
         }
 
-   
         if (current == nullptr)
         {
             cout << "Node with ID " << id << " not found in the list." << endl;
             return;
         }
 
-
-        prev->next = current->next;
-        delete current;
+        // Overwrite current node's data with the next node's data
+        if (current->next != nullptr)
+        {
+            current->data = current->next->data;
+            current->next = current->next->next;
+        }
+        else
+        {
+            // Last node in the list, remove it by updating prev's next pointer
+            prev->next = nullptr;
+        }
     }
+
     
 };
 

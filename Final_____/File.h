@@ -15,12 +15,14 @@ void writeRestaurantToCSV(string filename, Restaurant ChainArr[])
         return;
     }
 
+
     int i = 0;
     while (ChainArr[i].Capacity != 0)
     {
         file << ChainArr[i].id << "," << ChainArr[i].type << "," << ChainArr[i].Capacity << "," << ChainArr[i].staff << "\n";
         i++;
     }
+
     file.close();
 }
 

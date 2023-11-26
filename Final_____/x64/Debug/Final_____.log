@@ -1,8 +1,8 @@
 ﻿  Main.cpp
 C:\Users\HALO\Desktop\DSA CHAIN\Final_____\File.h(14,22): warning C4566: character represented by universal-character-name '\u1EC3' cannot be represented in the current code page (1252)
 C:\Users\HALO\Desktop\DSA CHAIN\Final_____\File.h(14,22): warning C4566: character represented by universal-character-name '\u1EDF' cannot be represented in the current code page (1252)
-C:\Users\HALO\Desktop\DSA CHAIN\Final_____\File.h(35,17): warning C4566: character represented by universal-character-name '\u1EC3' cannot be represented in the current code page (1252)
-C:\Users\HALO\Desktop\DSA CHAIN\Final_____\File.h(35,17): warning C4566: character represented by universal-character-name '\u1EDF' cannot be represented in the current code page (1252)
-C:\Users\HALO\Desktop\DSA CHAIN\Final_____\ManagerForm.h(824,2): warning C4154: deletion of an array expression; conversion to pointer supplied
+C:\Users\HALO\Desktop\DSA CHAIN\Final_____\File.h(37,17): warning C4566: character represented by universal-character-name '\u1EC3' cannot be represented in the current code page (1252)
+C:\Users\HALO\Desktop\DSA CHAIN\Final_____\File.h(37,17): warning C4566: character represented by universal-character-name '\u1EDF' cannot be represented in the current code page (1252)
+C:\Users\HALO\Desktop\DSA CHAIN\Final_____\ManagerForm.h(829,2): warning C4154: deletion of an array expression; conversion to pointer supplied
   Main.obj : MSIL module encountered; incremental linking is disabled for MSIL; performing full link
   Final_____.vcxproj -> C:\Users\HALO\Desktop\DSA CHAIN\x64\Debug\Final_____.exe
