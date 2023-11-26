@@ -78,13 +78,17 @@ namespace Final {
 	private: System::Windows::Forms::DataGridView^ dataGridView3;
 
 
-	private: System::Windows::Forms::DataVisualization::Charting::Chart^ chart2;
+
 	private: System::Windows::Forms::Button^ loadbutton;
 
 	private: System::Windows::Forms::Label^ label7;
 	private: System::Windows::Forms::Label^ label8;
 	private: System::Windows::Forms::Button^ buttonshow;
-	private: System::Windows::Forms::Button^ buttondel;
+	private: System::Windows::Forms::DataVisualization::Charting::Chart^ chart2;
+
+
+
+
 
 
 
@@ -160,17 +164,17 @@ namespace Final {
 		/// </summary>
 		void InitializeComponent(void)
 		{
-			System::Windows::Forms::DataVisualization::Charting::ChartArea^ chartArea3 = (gcnew System::Windows::Forms::DataVisualization::Charting::ChartArea());
-			System::Windows::Forms::DataVisualization::Charting::Legend^ legend3 = (gcnew System::Windows::Forms::DataVisualization::Charting::Legend());
-			System::Windows::Forms::DataVisualization::Charting::Series^ series3 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
-			System::Windows::Forms::DataVisualization::Charting::Title^ title3 = (gcnew System::Windows::Forms::DataVisualization::Charting::Title());
-			System::Windows::Forms::DataVisualization::Charting::ChartArea^ chartArea4 = (gcnew System::Windows::Forms::DataVisualization::Charting::ChartArea());
-			System::Windows::Forms::DataVisualization::Charting::Legend^ legend4 = (gcnew System::Windows::Forms::DataVisualization::Charting::Legend());
-			System::Windows::Forms::DataVisualization::Charting::Series^ series4 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
-			System::Windows::Forms::DataVisualization::Charting::Title^ title4 = (gcnew System::Windows::Forms::DataVisualization::Charting::Title());
+			System::Windows::Forms::DataVisualization::Charting::ChartArea^ chartArea1 = (gcnew System::Windows::Forms::DataVisualization::Charting::ChartArea());
+			System::Windows::Forms::DataVisualization::Charting::Legend^ legend1 = (gcnew System::Windows::Forms::DataVisualization::Charting::Legend());
+			System::Windows::Forms::DataVisualization::Charting::Series^ series1 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
+			System::Windows::Forms::DataVisualization::Charting::Title^ title1 = (gcnew System::Windows::Forms::DataVisualization::Charting::Title());
+			System::Windows::Forms::DataVisualization::Charting::ChartArea^ chartArea2 = (gcnew System::Windows::Forms::DataVisualization::Charting::ChartArea());
+			System::Windows::Forms::DataVisualization::Charting::Legend^ legend2 = (gcnew System::Windows::Forms::DataVisualization::Charting::Legend());
+			System::Windows::Forms::DataVisualization::Charting::Series^ series2 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
+			System::Windows::Forms::DataVisualization::Charting::Title^ title2 = (gcnew System::Windows::Forms::DataVisualization::Charting::Title());
 			this->tabPage4 = (gcnew System::Windows::Forms::TabPage());
-			this->loadbutton = (gcnew System::Windows::Forms::Button());
 			this->chart2 = (gcnew System::Windows::Forms::DataVisualization::Charting::Chart());
+			this->loadbutton = (gcnew System::Windows::Forms::Button());
 			this->tabPage3 = (gcnew System::Windows::Forms::TabPage());
 			this->buttonlast = (gcnew System::Windows::Forms::Button());
 			this->Midbutton = (gcnew System::Windows::Forms::Button());
@@ -179,7 +183,6 @@ namespace Final {
 			this->chart1 = (gcnew System::Windows::Forms::DataVisualization::Charting::Chart());
 			this->tabPage2 = (gcnew System::Windows::Forms::TabPage());
 			this->buttonshow = (gcnew System::Windows::Forms::Button());
-			this->buttondel = (gcnew System::Windows::Forms::Button());
 			this->dataGridView2 = (gcnew System::Windows::Forms::DataGridView());
 			this->tabPage1 = (gcnew System::Windows::Forms::TabPage());
 			this->label8 = (gcnew System::Windows::Forms::Label());
@@ -213,8 +216,8 @@ namespace Final {
 			// 
 			// tabPage4
 			// 
-			this->tabPage4->Controls->Add(this->loadbutton);
 			this->tabPage4->Controls->Add(this->chart2);
+			this->tabPage4->Controls->Add(this->loadbutton);
 			this->tabPage4->Location = System::Drawing::Point(4, 37);
 			this->tabPage4->Margin = System::Windows::Forms::Padding(3, 5, 3, 5);
 			this->tabPage4->Name = L"tabPage4";
@@ -224,39 +227,38 @@ namespace Final {
 			this->tabPage4->Text = L"Year Revenue Statistics";
 			this->tabPage4->UseVisualStyleBackColor = true;
 			// 
+			// chart2
+			// 
+			chartArea1->Name = L"ChartArea1";
+			this->chart2->ChartAreas->Add(chartArea1);
+			legend1->Name = L"Legend1";
+			this->chart2->Legends->Add(legend1);
+			this->chart2->Location = System::Drawing::Point(119, 51);
+			this->chart2->Name = L"chart2";
+			series1->ChartArea = L"ChartArea1";
+			series1->ChartType = System::Windows::Forms::DataVisualization::Charting::SeriesChartType::Candlestick;
+			series1->Legend = L"Legend1";
+			series1->Name = L"Revenue";
+			series1->YValuesPerPoint = 4;
+			this->chart2->Series->Add(series1);
+			this->chart2->Size = System::Drawing::Size(902, 479);
+			this->chart2->TabIndex = 2;
+			this->chart2->Text = L"chart2";
+			title1->Name = L"Title1";
+			title1->Text = L"Revenue";
+			this->chart2->Titles->Add(title1);
+			this->chart2->Click += gcnew System::EventHandler(this, &ManagerForm::chart2_Click_1);
+			// 
 			// loadbutton
 			// 
-			this->loadbutton->Location = System::Drawing::Point(962, 384);
+			this->loadbutton->Location = System::Drawing::Point(1070, 442);
 			this->loadbutton->Margin = System::Windows::Forms::Padding(3, 5, 3, 5);
 			this->loadbutton->Name = L"loadbutton";
-			this->loadbutton->Size = System::Drawing::Size(242, 94);
+			this->loadbutton->Size = System::Drawing::Size(182, 68);
 			this->loadbutton->TabIndex = 1;
 			this->loadbutton->Text = L"Load";
 			this->loadbutton->UseVisualStyleBackColor = true;
 			this->loadbutton->Click += gcnew System::EventHandler(this, &ManagerForm::button2_Click);
-			// 
-			// chart2
-			// 
-			chartArea3->Name = L"ChartArea1";
-			this->chart2->ChartAreas->Add(chartArea3);
-			legend3->Name = L"Legend1";
-			this->chart2->Legends->Add(legend3);
-			this->chart2->Location = System::Drawing::Point(-4, 0);
-			this->chart2->Margin = System::Windows::Forms::Padding(3, 5, 3, 5);
-			this->chart2->Name = L"chart2";
-			series3->ChartArea = L"ChartArea1";
-			series3->ChartType = System::Windows::Forms::DataVisualization::Charting::SeriesChartType::Doughnut;
-			series3->Legend = L"Legend1";
-			series3->Name = L"Revenue ";
-			this->chart2->Series->Add(series3);
-			this->chart2->Size = System::Drawing::Size(1278, 570);
-			this->chart2->TabIndex = 0;
-			this->chart2->Text = L"chart2";
-			title3->Font = (gcnew System::Drawing::Font(L"Agency FB", 24, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			title3->Name = L"Title1";
-			title3->Text = L"Revenue Of Years";
-			this->chart2->Titles->Add(title3);
 			// 
 			// tabPage3
 			// 
@@ -278,7 +280,7 @@ namespace Final {
 			// 
 			this->buttonlast->Font = (gcnew System::Drawing::Font(L"Agency FB", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->buttonlast->Location = System::Drawing::Point(125, 415);
+			this->buttonlast->Location = System::Drawing::Point(114, 426);
 			this->buttonlast->Margin = System::Windows::Forms::Padding(3, 5, 3, 5);
 			this->buttonlast->Name = L"buttonlast";
 			this->buttonlast->Size = System::Drawing::Size(218, 63);
@@ -291,7 +293,7 @@ namespace Final {
 			// 
 			this->Midbutton->Font = (gcnew System::Drawing::Font(L"Agency FB", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->Midbutton->Location = System::Drawing::Point(125, 292);
+			this->Midbutton->Location = System::Drawing::Point(114, 303);
 			this->Midbutton->Margin = System::Windows::Forms::Padding(3, 5, 3, 5);
 			this->Midbutton->Name = L"Midbutton";
 			this->Midbutton->Size = System::Drawing::Size(218, 63);
@@ -304,7 +306,7 @@ namespace Final {
 			// 
 			this->Secondbutton->Font = (gcnew System::Drawing::Font(L"Agency FB", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->Secondbutton->Location = System::Drawing::Point(125, 172);
+			this->Secondbutton->Location = System::Drawing::Point(114, 183);
 			this->Secondbutton->Margin = System::Windows::Forms::Padding(3, 5, 3, 5);
 			this->Secondbutton->Name = L"Secondbutton";
 			this->Secondbutton->Size = System::Drawing::Size(218, 63);
@@ -317,7 +319,7 @@ namespace Final {
 			// 
 			this->Firstbutton->Font = (gcnew System::Drawing::Font(L"Agency FB", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->Firstbutton->Location = System::Drawing::Point(125, 57);
+			this->Firstbutton->Location = System::Drawing::Point(114, 68);
 			this->Firstbutton->Margin = System::Windows::Forms::Padding(3, 5, 3, 5);
 			this->Firstbutton->Name = L"Firstbutton";
 			this->Firstbutton->Size = System::Drawing::Size(218, 63);
@@ -331,33 +333,32 @@ namespace Final {
 			this->chart1->BackImageTransparentColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(255)),
 				static_cast<System::Int32>(static_cast<System::Byte>(128)), static_cast<System::Int32>(static_cast<System::Byte>(128)));
 			this->chart1->BorderlineColor = System::Drawing::Color::DarkGray;
-			chartArea4->Name = L"ChartArea1";
-			this->chart1->ChartAreas->Add(chartArea4);
-			legend4->Name = L"Legend1";
-			this->chart1->Legends->Add(legend4);
+			chartArea2->Name = L"ChartArea1";
+			this->chart1->ChartAreas->Add(chartArea2);
+			legend2->Name = L"Legend1";
+			this->chart1->Legends->Add(legend2);
 			this->chart1->Location = System::Drawing::Point(480, 31);
 			this->chart1->Margin = System::Windows::Forms::Padding(3, 5, 3, 5);
 			this->chart1->Name = L"chart1";
 			this->chart1->Palette = System::Windows::Forms::DataVisualization::Charting::ChartColorPalette::Berry;
-			series4->ChartArea = L"ChartArea1";
-			series4->Font = (gcnew System::Drawing::Font(L"Agency FB", 16.2F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			series2->ChartArea = L"ChartArea1";
+			series2->Font = (gcnew System::Drawing::Font(L"Agency FB", 16.2F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			series4->Legend = L"Legend1";
-			series4->Name = L"Revenue";
-			this->chart1->Series->Add(series4);
+			series2->Legend = L"Legend1";
+			series2->Name = L"Revenue";
+			this->chart1->Series->Add(series2);
 			this->chart1->Size = System::Drawing::Size(757, 486);
 			this->chart1->TabIndex = 0;
 			this->chart1->Text = L"chart1";
-			title4->Font = (gcnew System::Drawing::Font(L"Agency FB", 19.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			title2->Font = (gcnew System::Drawing::Font(L"Agency FB", 19.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			title4->Name = L"Title1";
-			title4->Text = L"Revenue Of Quater";
-			this->chart1->Titles->Add(title4);
+			title2->Name = L"Title1";
+			title2->Text = L"Revenue Of Quater";
+			this->chart1->Titles->Add(title2);
 			// 
 			// tabPage2
 			// 
 			this->tabPage2->Controls->Add(this->buttonshow);
-			this->tabPage2->Controls->Add(this->buttondel);
 			this->tabPage2->Controls->Add(this->dataGridView2);
 			this->tabPage2->Font = (gcnew System::Drawing::Font(L"Agency FB", 13.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
@@ -374,7 +375,7 @@ namespace Final {
 			// 
 			this->buttonshow->Font = (gcnew System::Drawing::Font(L"Agency FB", 13.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->buttonshow->Location = System::Drawing::Point(724, 460);
+			this->buttonshow->Location = System::Drawing::Point(583, 459);
 			this->buttonshow->Name = L"buttonshow";
 			this->buttonshow->Size = System::Drawing::Size(162, 67);
 			this->buttonshow->TabIndex = 2;
@@ -382,22 +383,10 @@ namespace Final {
 			this->buttonshow->UseVisualStyleBackColor = true;
 			this->buttonshow->Click += gcnew System::EventHandler(this, &ManagerForm::buttonshow_Click);
 			// 
-			// buttondel
-			// 
-			this->buttondel->Font = (gcnew System::Drawing::Font(L"Agency FB", 13.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->buttondel->Location = System::Drawing::Point(419, 460);
-			this->buttondel->Name = L"buttondel";
-			this->buttondel->Size = System::Drawing::Size(162, 67);
-			this->buttondel->TabIndex = 1;
-			this->buttondel->Text = L"Delete Nearest";
-			this->buttondel->UseVisualStyleBackColor = true;
-			this->buttondel->Click += gcnew System::EventHandler(this, &ManagerForm::buttondel_Click);
-			// 
 			// dataGridView2
 			// 
 			this->dataGridView2->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
-			this->dataGridView2->Location = System::Drawing::Point(314, 26);
+			this->dataGridView2->Location = System::Drawing::Point(325, 30);
 			this->dataGridView2->Margin = System::Windows::Forms::Padding(3, 5, 3, 5);
 			this->dataGridView2->Name = L"dataGridView2";
 			this->dataGridView2->RowHeadersWidth = 51;
@@ -594,7 +583,7 @@ namespace Final {
 			this->label7->AutoSize = true;
 			this->label7->Font = (gcnew System::Drawing::Font(L"Agency FB", 28.2F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label7->Location = System::Drawing::Point(117, 159);
+			this->label7->Location = System::Drawing::Point(107, 92);
 			this->label7->Name = L"label7";
 			this->label7->Size = System::Drawing::Size(150, 57);
 			this->label7->TabIndex = 2;
@@ -604,7 +593,7 @@ namespace Final {
 			// 
 			this->Showbutton->Font = (gcnew System::Drawing::Font(L"Agency FB", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->Showbutton->Location = System::Drawing::Point(88, 306);
+			this->Showbutton->Location = System::Drawing::Point(81, 238);
 			this->Showbutton->Margin = System::Windows::Forms::Padding(3, 5, 3, 5);
 			this->Showbutton->Name = L"Showbutton";
 			this->Showbutton->Size = System::Drawing::Size(194, 69);
@@ -722,9 +711,11 @@ private: System::Void tabControl1_SelectedIndexChanged(System::Object^ sender, S
 }
 private: System::Void Firstbutton_Click(System::Object^ sender, System::EventArgs^ e) 
 {
-	double a = FinalProfitbymoth(History, 1, 1, 1);
-	double b = FinalProfitbymoth(History, 2, 2, 2);
-	double c = FinalProfitbymoth(History, 3, 3, 3);
+	ToArrayHistory(History, HistoryArr);
+	double a = moneybymoth(History, HistoryArr, 1, 1, 1);
+	double b = moneybymoth(History, HistoryArr, 2, 2, 2);
+	double c = moneybymoth(History, HistoryArr, 3, 3, 3);
+	chart1->Series["Revenue"]->Points->Clear();
 
 	chart1->Series["Revenue"]->Points->AddXY("Month 1", a);
 	chart1->Series["Revenue"]->Points->AddXY("Month 2", b);
@@ -733,11 +724,11 @@ private: System::Void Firstbutton_Click(System::Object^ sender, System::EventArg
 }
 private: System::Void Secondbutton_Click(System::Object^ sender, System::EventArgs^ e) 
 {
-	double a = FinalProfitbymoth(History, 4, 4, 4);
-	double b = FinalProfitbymoth(History, 5, 5, 5);
-	double c = FinalProfitbymoth(History, 6, 6, 6);
+	double a = moneybymoth(History, HistoryArr, 4, 4, 4);
+	double b = moneybymoth(History, HistoryArr, 5, 5, 5);
+	double c = moneybymoth(History, HistoryArr, 6, 6, 6);
 
-	// Clear dữ liệu cũ của button trước
+	 //Clear dữ liệu cũ của button trước
 	chart1->Series["Revenue"]->Points->Clear();
 
 	chart1->Series["Revenue"]->Points->AddXY("Month 4", a);
@@ -746,9 +737,9 @@ private: System::Void Secondbutton_Click(System::Object^ sender, System::EventAr
 }
 private: System::Void Midbutton_Click(System::Object^ sender, System::EventArgs^ e) 
 {
-	double a = FinalProfitbymoth(History, 7, 7, 7);
-	double b = FinalProfitbymoth(History, 8, 8, 8);
-	double c = FinalProfitbymoth(History, 9, 9, 9);
+	double a = moneybymoth(History, HistoryArr, 7, 7, 7);
+	double b = moneybymoth(History, HistoryArr, 8, 8, 8);
+	double c = moneybymoth(History, HistoryArr, 9, 9, 9);
 	chart1->Series["Revenue"]->Points->Clear();
 
 
@@ -758,9 +749,9 @@ private: System::Void Midbutton_Click(System::Object^ sender, System::EventArgs^
 }
 private: System::Void buttonlast_Click(System::Object^ sender, System::EventArgs^ e) 
 {
-	double a = FinalProfitbymoth(History, 10, 10, 10);
-	double b = FinalProfitbymoth(History, 11, 11, 11);
-	double c = FinalProfitbymoth(History, 12, 12, 12);
+	double a = moneybymoth(History, HistoryArr, 10, 10, 10);
+	double b = moneybymoth(History, HistoryArr, 11, 11, 11);
+	double c = moneybymoth(History, HistoryArr, 12, 12, 12);
 	chart1->Series["Revenue"]->Points->Clear();
 
 	chart1->Series["Revenue"]->Points->AddXY("Month 10", a);
@@ -769,9 +760,9 @@ private: System::Void buttonlast_Click(System::Object^ sender, System::EventArgs
 }
 private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) 
 {
-	double a = FinalProfitbymoth(History, 1, 2, 3) + FinalProfitbymoth(History, 4, 5, 6) + FinalProfitbymoth(History, 7, 8, 9) + FinalProfitbymoth(History, 10, 11, 12);
+	double a = moneybymoth(History, HistoryArr, 1, 2, 3) + moneybymoth(History, HistoryArr, 4, 5, 6) + moneybymoth(History, HistoryArr, 7, 8, 9) + moneybymoth(History, HistoryArr, 10, 11, 12);
 
-	chart2->Series["Revenuenut"]->Points->AddXY("Year", a);
+	chart2->Series["Revenue"]->Points->AddXY("Year", a);
 }
 private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) 
 {
@@ -806,7 +797,7 @@ private: System::Void buttonshow_Click(System::Object^ sender, System::EventArgs
 		dataGridView2->Rows->Add();
 		dataGridView2->Rows[i]->Cells[0]->Value = gcnew String(HistoryArr[i].cusname.c_str());
 		dataGridView2->Rows[i]->Cells[1]->Value = gcnew String(HistoryArr[i].phonenumber.c_str());
-		dataGridView2->Rows[i]->Cells[1]->Value = gcnew String(HistoryArr[i].tableid.c_str());
+		dataGridView2->Rows[i]->Cells[2]->Value = gcnew String(HistoryArr[i].tableid.c_str());
 	}
 
 }
@@ -817,9 +808,64 @@ private: System::Void deletebutton_Click(System::Object^ sender, System::EventAr
 }
 private: System::Void Showbutton_Click_1(System::Object^ sender, System::EventArgs^ e) 
 {
+	ReadHistoryListCSV(fname2);
+	ToArrayHistory(History, HistoryArr);
+
+	if (dataGridView3->Columns->Count == 0)
+	{
+		dataGridView3->Columns->Add("resid", "Resid");
+		dataGridView3->Columns->Add("phonenumber", "Phonenumber");
+		dataGridView3->Columns->Add("cusname", "Cusname");
+		dataGridView3->Columns->Add("tableid", "Tableid");
+		dataGridView3->Columns->Add("cusnum", "Cusnum");
+		dataGridView3->Columns->Add("dayT", "DayT");
+		dataGridView3->Columns->Add("monthT", "MonthT");
+		dataGridView3->Columns->Add("yearT", "YearT");
+		dataGridView3->Columns->Add("addorRemove", "AddorRemove");
+
+	}
+
+	dataGridView3->Columns[0]->Name = "Resid";
+	dataGridView3->Columns[1]->Name = "phonenumber";
+	dataGridView3->Columns[2]->Name = "cusname";
+	dataGridView3->Columns[3]->Name = "tableid";
+	dataGridView3->Columns[4]->Name = "cusnum";
+	dataGridView3->Columns[5]->Name = "dayT";
+	dataGridView3->Columns[6]->Name = "monthT";
+	dataGridView3->Columns[7]->Name = "yearT";
+	dataGridView3->Columns[8]->Name = "addorRemove";
+
+
+
+	ToArrayHistory(History, HistoryArr);
+
+	for (int i = 0; i <= 30; i++)
+	{
+		dataGridView3->Rows->Add();
+		dataGridView3->Rows[i]->Cells[0]->Value = gcnew String(HistoryArr[i].Resid.c_str());
+		dataGridView3->Rows[i]->Cells[1]->Value = gcnew String(HistoryArr[i].phonenumber.c_str());
+		dataGridView3->Rows[i]->Cells[2]->Value = gcnew String(HistoryArr[i].cusname.c_str());
+		dataGridView3->Rows[i]->Cells[3]->Value = gcnew String(HistoryArr[i].tableid.c_str());
+		dataGridView3->Rows[i]->Cells[4]->Value = HistoryArr[i].cusnum;
+		dataGridView3->Rows[i]->Cells[5]->Value = HistoryArr[i].dayT;
+		dataGridView3->Rows[i]->Cells[6]->Value = HistoryArr[i].mothT;
+		dataGridView3->Rows[i]->Cells[7]->Value = HistoryArr[i].yearT;
+		dataGridView3->Rows[i]->Cells[8]->Value = HistoryArr[i].AddorRemove;
+	}
+}
+private: System::Void dataGridView3_CellContentClick(System::Object^ sender, System::Windows::Forms::DataGridViewCellEventArgs^ e) 
+{
+	
+}
+private: System::Void textBox1_TextChanged(System::Object^ sender, System::EventArgs^ e) 
+{
 
 }
-private: System::Void dataGridView3_CellContentClick(System::Object^ sender, System::Windows::Forms::DataGridViewCellEventArgs^ e) {
+private: System::Void chart2_Click(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void chart2_Click_1(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void button1_Click_1(System::Object^ sender, System::EventArgs^ e) {
 }
 };
 }

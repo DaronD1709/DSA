@@ -1,1 +1,15 @@
-﻿  Final_____.vcxproj -> C:\Users\HALO\Desktop\DSA CHAIN\x64\Debug\Final_____.exe
+﻿  Main.cpp
+C:\Users\HALO\Desktop\DSACHAIN1\DSA\Final_____\File.h(15,22): warning C4566: character represented by universal-character-name '\u1EC3' cannot be represented in the current code page (1252)
+C:\Users\HALO\Desktop\DSACHAIN1\DSA\Final_____\File.h(15,22): warning C4566: character represented by universal-character-name '\u1EDF' cannot be represented in the current code page (1252)
+C:\Users\HALO\Desktop\DSACHAIN1\DSA\Final_____\File.h(38,17): warning C4566: character represented by universal-character-name '\u1EC3' cannot be represented in the current code page (1252)
+C:\Users\HALO\Desktop\DSACHAIN1\DSA\Final_____\File.h(38,17): warning C4566: character represented by universal-character-name '\u1EDF' cannot be represented in the current code page (1252)
+C:\Users\HALO\Desktop\DSACHAIN1\DSA\Final_____\File.h(79,17): warning C4566: character represented by universal-character-name '\u1EC3' cannot be represented in the current code page (1252)
+C:\Users\HALO\Desktop\DSACHAIN1\DSA\Final_____\File.h(79,17): warning C4566: character represented by universal-character-name '\u1EDF' cannot be represented in the current code page (1252)
+C:\Users\HALO\Desktop\DSACHAIN1\DSA\Final_____\File.h(91,9): warning C4101: 'dayT': unreferenced local variable
+C:\Users\HALO\Desktop\DSACHAIN1\DSA\Final_____\File.h(93,9): warning C4101: 'yearT': unreferenced local variable
+C:\Users\HALO\Desktop\DSACHAIN1\DSA\Final_____\File.h(90,9): warning C4101: 'cusnum': unreferenced local variable
+C:\Users\HALO\Desktop\DSACHAIN1\DSA\Final_____\File.h(92,9): warning C4101: 'monthT': unreferenced local variable
+C:\Users\HALO\Desktop\DSACHAIN1\DSA\Final_____\File.h(129,22): warning C4566: character represented by universal-character-name '\u1EC3' cannot be represented in the current code page (1252)
+C:\Users\HALO\Desktop\DSACHAIN1\DSA\Final_____\File.h(129,22): warning C4566: character represented by universal-character-name '\u1EDF' cannot be represented in the current code page (1252)
+  Main.obj : MSIL module encountered; incremental linking is disabled for MSIL; performing full link
+  Final_____.vcxproj -> C:\Users\HALO\Desktop\DSACHAIN1\DSA\x64\Debug\Final_____.exe

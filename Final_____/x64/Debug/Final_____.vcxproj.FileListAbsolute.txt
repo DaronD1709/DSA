@@ -28,3 +28,8 @@ C:\Users\HALO\Desktop\DSA CHAIN\Final_____\x64\Debug\Final.CustomerForm.resource
 C:\Users\HALO\Desktop\DSA CHAIN\Final_____\x64\Debug\Final.ManagerForm.resources
 C:\Users\HALO\Desktop\DSA CHAIN\Final_____\x64\Debug\Final.MenuForm.resources
 C:\Users\HALO\Desktop\DSA CHAIN\Final_____\x64\Debug\Final_____.vcxproj.GenerateResource.cache
+C:\Users\HALO\Desktop\DSACHAIN1\DSA\Final_____\x64\Debug\Final_____.vcxproj.AssemblyReference.cache
+C:\Users\HALO\Desktop\DSACHAIN1\DSA\Final_____\x64\Debug\Final.CustomerForm.resources
+C:\Users\HALO\Desktop\DSACHAIN1\DSA\Final_____\x64\Debug\Final.ManagerForm.resources
+C:\Users\HALO\Desktop\DSACHAIN1\DSA\Final_____\x64\Debug\Final.MenuForm.resources
+C:\Users\HALO\Desktop\DSACHAIN1\DSA\Final_____\x64\Debug\Final_____.vcxproj.GenerateResource.cache

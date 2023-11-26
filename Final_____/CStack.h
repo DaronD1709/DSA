@@ -118,6 +118,7 @@ public:
             Node* current = topNode;
             while (current != nullptr)
             {
+                HistoryArr[i].Resid = current->data.Resid;
                 HistoryArr[i].tableid = current->data.tableid;
                 HistoryArr[i].cusname = current->data.cusname;
                 HistoryArr[i].phonenumber = current->data.phonenumber;

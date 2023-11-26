@@ -4,8 +4,8 @@
 #include "_lib.h"
 #include "Fuction.h"
 
-string fname = "C://Users//HALO//Desktop//DSA CHAIN//RestauranList.csv";
-string fname2 = "C://Users//HALO//Desktop//DSA CHAIN//HistoryList.csv";
+string fname = "C://Users//HALO//Desktop//DSACHAIN1//DSA//RestauranList1.csv";
+string fname2 = "C://Users//HALO//Desktop//DSACHAIN1//DSA//HistoryList.csv";
 
 // viet de tu Arr -> File
 void writeRestaurantToCSV(string filename, Restaurant ChainArr[])
@@ -80,6 +80,7 @@ void ReadHistoryListCSV(string filename)
         return;
     }
 
+    Record a;
     string line, word;
     stringstream s;
     string Resid;
@@ -90,43 +91,32 @@ void ReadHistoryListCSV(string filename)
     int dayT;
     int monthT;
     int yearT;
- 
+    
       
     while (getline(file, line))
         {
             s.clear();
 
             s.str(line);
-
+            getline(s, a.Resid, ',');
+            getline(s, a.phonenumber, ',');
+            getline(s, a.cusname, ',');
+            getline(s, a.tableid, ',');
             getline(s, word, ',');
-            Resid = word;
-
+            a.cusnum = stoi(word);
             getline(s, word, ',');
-            phonenumber = word;
-
+            a.dayT= stoi(word);
             getline(s, word, ',');
-            cusname = stoi(word);
-
+            a.mothT = stoi(word);
             getline(s, word, ',');
-            Tableid = word;
-
+            a.yearT = stoi(word);
             getline(s, word, ',');
-            cusnum = stoi(word);
-
-
-            getline(s, word, ',');
-            dayT = stoi(word);
-
-
-            getline(s, word, ',');
-            monthT = stoi(word);
-
-
-            getline(s, word, ',');
-            yearT = stoi(word);
-            
-
-            StamentSetTable(Chain, History, TotalMoney, Resid, phonenumber, cusname, Tableid, cusnum, dayT, monthT, yearT);
+            if (word == "1")
+            {
+                a.AddorRemove = true;
+            }
+            else a.AddorRemove = false;
+            History.push(a);
         }
 
     file.close();

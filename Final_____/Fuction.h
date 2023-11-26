@@ -37,7 +37,7 @@ Record HistoryArr[100];
         }
     }
     // datban
-    void StamentSetTable(LinkedList<Restaurant> &Chain, Stack<Record>& History, double& Totalmoney, string Resid, string phonenumber,string cusname, string Tableid, int cusnum, int dayT, int mothT, int yearT)
+    void StamentSetTable(LinkedList<Restaurant> &Chain, Stack<Record>& History, double& Totalmoney, string Resid,  string cusname, string phonenumber, string Tableid, int cusnum, int dayT, int mothT, int yearT)
     {
         Restaurant a;
         a.Capacity = Chain.findNodeByID(Resid)->data.Capacity;
@@ -112,12 +112,21 @@ Record HistoryArr[100];
         Totalmoney -= cusnum * moneyperone;
     }
     // tinh tien theo quy
-    double moneybymoth(Stack<Record>& History, int moth1, int moth2, int moth3)
+    double moneybymoth(Stack<Record>& History, Record HistoryArr[], int moth1, int moth2, int moth3)
     {
-        return History.getTotalProfit(moth1, moth2, moth3);
+        
+        int i = 0;
+        double totalprofit = 0;
+        while (HistoryArr[i].dayT != 0)
+        {
+            if (HistoryArr[i].mothT == moth1 || HistoryArr[i].mothT == moth2 || HistoryArr[i].mothT == moth3)
+                totalprofit += HistoryArr[i].money;
+            i++;
+        }
+        return totalprofit;
     }
 
-    double moneystaffbymoth(Stack<Record>& History, int moth1, int moth2, int moth3)
+   /* double moneystaffbymoth(Stack<Record>& History, int moth1, int moth2, int moth3)
     {
         return History.getTotalProfit(moth1, moth2, moth3) * 0.1;
     }
@@ -126,7 +135,7 @@ Record HistoryArr[100];
     double FinalProfitbymoth(Stack<Record>& History, int moth1, int moth2, int moth3)
     {
         return moneybymoth(History, moth1, moth2, moth3) * 0.9 - moneystaffbymoth(History, moth1, moth2, moth3);
-    }
+    }*/
 
     void ToArray(LinkedList<Restaurant>& Chain, Restaurant ChainArr[])
     {
