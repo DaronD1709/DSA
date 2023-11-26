@@ -160,14 +160,14 @@ namespace Final {
 		/// </summary>
 		void InitializeComponent(void)
 		{
-			System::Windows::Forms::DataVisualization::Charting::ChartArea^ chartArea1 = (gcnew System::Windows::Forms::DataVisualization::Charting::ChartArea());
-			System::Windows::Forms::DataVisualization::Charting::Legend^ legend1 = (gcnew System::Windows::Forms::DataVisualization::Charting::Legend());
-			System::Windows::Forms::DataVisualization::Charting::Series^ series1 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
-			System::Windows::Forms::DataVisualization::Charting::Title^ title1 = (gcnew System::Windows::Forms::DataVisualization::Charting::Title());
-			System::Windows::Forms::DataVisualization::Charting::ChartArea^ chartArea2 = (gcnew System::Windows::Forms::DataVisualization::Charting::ChartArea());
-			System::Windows::Forms::DataVisualization::Charting::Legend^ legend2 = (gcnew System::Windows::Forms::DataVisualization::Charting::Legend());
-			System::Windows::Forms::DataVisualization::Charting::Series^ series2 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
-			System::Windows::Forms::DataVisualization::Charting::Title^ title2 = (gcnew System::Windows::Forms::DataVisualization::Charting::Title());
+			System::Windows::Forms::DataVisualization::Charting::ChartArea^ chartArea3 = (gcnew System::Windows::Forms::DataVisualization::Charting::ChartArea());
+			System::Windows::Forms::DataVisualization::Charting::Legend^ legend3 = (gcnew System::Windows::Forms::DataVisualization::Charting::Legend());
+			System::Windows::Forms::DataVisualization::Charting::Series^ series3 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
+			System::Windows::Forms::DataVisualization::Charting::Title^ title3 = (gcnew System::Windows::Forms::DataVisualization::Charting::Title());
+			System::Windows::Forms::DataVisualization::Charting::ChartArea^ chartArea4 = (gcnew System::Windows::Forms::DataVisualization::Charting::ChartArea());
+			System::Windows::Forms::DataVisualization::Charting::Legend^ legend4 = (gcnew System::Windows::Forms::DataVisualization::Charting::Legend());
+			System::Windows::Forms::DataVisualization::Charting::Series^ series4 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
+			System::Windows::Forms::DataVisualization::Charting::Title^ title4 = (gcnew System::Windows::Forms::DataVisualization::Charting::Title());
 			this->tabPage4 = (gcnew System::Windows::Forms::TabPage());
 			this->loadbutton = (gcnew System::Windows::Forms::Button());
 			this->chart2 = (gcnew System::Windows::Forms::DataVisualization::Charting::Chart());
@@ -237,26 +237,26 @@ namespace Final {
 			// 
 			// chart2
 			// 
-			chartArea1->Name = L"ChartArea1";
-			this->chart2->ChartAreas->Add(chartArea1);
-			legend1->Name = L"Legend1";
-			this->chart2->Legends->Add(legend1);
+			chartArea3->Name = L"ChartArea1";
+			this->chart2->ChartAreas->Add(chartArea3);
+			legend3->Name = L"Legend1";
+			this->chart2->Legends->Add(legend3);
 			this->chart2->Location = System::Drawing::Point(-4, 0);
 			this->chart2->Margin = System::Windows::Forms::Padding(3, 5, 3, 5);
 			this->chart2->Name = L"chart2";
-			series1->ChartArea = L"ChartArea1";
-			series1->ChartType = System::Windows::Forms::DataVisualization::Charting::SeriesChartType::Doughnut;
-			series1->Legend = L"Legend1";
-			series1->Name = L"Revenue ";
-			this->chart2->Series->Add(series1);
+			series3->ChartArea = L"ChartArea1";
+			series3->ChartType = System::Windows::Forms::DataVisualization::Charting::SeriesChartType::Doughnut;
+			series3->Legend = L"Legend1";
+			series3->Name = L"Revenue ";
+			this->chart2->Series->Add(series3);
 			this->chart2->Size = System::Drawing::Size(1278, 570);
 			this->chart2->TabIndex = 0;
 			this->chart2->Text = L"chart2";
-			title1->Font = (gcnew System::Drawing::Font(L"Agency FB", 24, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			title3->Font = (gcnew System::Drawing::Font(L"Agency FB", 24, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			title1->Name = L"Title1";
-			title1->Text = L"Revenue Of Years";
-			this->chart2->Titles->Add(title1);
+			title3->Name = L"Title1";
+			title3->Text = L"Revenue Of Years";
+			this->chart2->Titles->Add(title3);
 			// 
 			// tabPage3
 			// 
@@ -331,28 +331,28 @@ namespace Final {
 			this->chart1->BackImageTransparentColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(255)),
 				static_cast<System::Int32>(static_cast<System::Byte>(128)), static_cast<System::Int32>(static_cast<System::Byte>(128)));
 			this->chart1->BorderlineColor = System::Drawing::Color::DarkGray;
-			chartArea2->Name = L"ChartArea1";
-			this->chart1->ChartAreas->Add(chartArea2);
-			legend2->Name = L"Legend1";
-			this->chart1->Legends->Add(legend2);
+			chartArea4->Name = L"ChartArea1";
+			this->chart1->ChartAreas->Add(chartArea4);
+			legend4->Name = L"Legend1";
+			this->chart1->Legends->Add(legend4);
 			this->chart1->Location = System::Drawing::Point(480, 31);
 			this->chart1->Margin = System::Windows::Forms::Padding(3, 5, 3, 5);
 			this->chart1->Name = L"chart1";
 			this->chart1->Palette = System::Windows::Forms::DataVisualization::Charting::ChartColorPalette::Berry;
-			series2->ChartArea = L"ChartArea1";
-			series2->Font = (gcnew System::Drawing::Font(L"Agency FB", 16.2F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			series4->ChartArea = L"ChartArea1";
+			series4->Font = (gcnew System::Drawing::Font(L"Agency FB", 16.2F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			series2->Legend = L"Legend1";
-			series2->Name = L"Revenue";
-			this->chart1->Series->Add(series2);
+			series4->Legend = L"Legend1";
+			series4->Name = L"Revenue";
+			this->chart1->Series->Add(series4);
 			this->chart1->Size = System::Drawing::Size(757, 486);
 			this->chart1->TabIndex = 0;
 			this->chart1->Text = L"chart1";
-			title2->Font = (gcnew System::Drawing::Font(L"Agency FB", 19.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			title4->Font = (gcnew System::Drawing::Font(L"Agency FB", 19.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			title2->Name = L"Title1";
-			title2->Text = L"Revenue Of Quater";
-			this->chart1->Titles->Add(title2);
+			title4->Name = L"Title1";
+			title4->Text = L"Revenue Of Quater";
+			this->chart1->Titles->Add(title4);
 			// 
 			// tabPage2
 			// 
@@ -374,7 +374,7 @@ namespace Final {
 			// 
 			this->buttonshow->Font = (gcnew System::Drawing::Font(L"Agency FB", 13.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->buttonshow->Location = System::Drawing::Point(722, 460);
+			this->buttonshow->Location = System::Drawing::Point(724, 460);
 			this->buttonshow->Name = L"buttonshow";
 			this->buttonshow->Size = System::Drawing::Size(162, 67);
 			this->buttonshow->TabIndex = 2;
@@ -623,6 +623,7 @@ namespace Final {
 			this->dataGridView3->RowTemplate->Height = 24;
 			this->dataGridView3->Size = System::Drawing::Size(829, 473);
 			this->dataGridView3->TabIndex = 0;
+			this->dataGridView3->CellContentClick += gcnew System::Windows::Forms::DataGridViewCellEventHandler(this, &ManagerForm::dataGridView3_CellContentClick);
 			// 
 			// ManagerForm
 			// 
@@ -783,6 +784,7 @@ private: System::Void buttondel_Click(System::Object^ sender, System::EventArgs^
 }
 private: System::Void buttonshow_Click(System::Object^ sender, System::EventArgs^ e) 
 {
+	ReadHistoryListCSV(fname2);
 	ToArrayHistory(History, HistoryArr);
 
 	if (dataGridView2->Columns->Count == 0)
@@ -806,6 +808,7 @@ private: System::Void buttonshow_Click(System::Object^ sender, System::EventArgs
 		dataGridView2->Rows[i]->Cells[1]->Value = gcnew String(HistoryArr[i].phonenumber.c_str());
 		dataGridView2->Rows[i]->Cells[1]->Value = gcnew String(HistoryArr[i].tableid.c_str());
 	}
+
 }
 private: System::Void deletebutton_Click(System::Object^ sender, System::EventArgs^ e) 
 {
@@ -815,6 +818,8 @@ private: System::Void deletebutton_Click(System::Object^ sender, System::EventAr
 private: System::Void Showbutton_Click_1(System::Object^ sender, System::EventArgs^ e) 
 {
 
+}
+private: System::Void dataGridView3_CellContentClick(System::Object^ sender, System::Windows::Forms::DataGridViewCellEventArgs^ e) {
 }
 };
 }

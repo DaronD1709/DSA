@@ -705,7 +705,6 @@ private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e
 	DayDel->Clear();
 	MothDel->Clear();
 	YearDel->Clear();
-
 }
 
 private: System::Void ViewRes_Click(System::Object^ sender, System::EventArgs^ e) 

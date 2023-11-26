@@ -16,6 +16,7 @@ using namespace System::Windows::Forms;
 int main()
 {
 	readRestaurantFromCSV(fname);
+	ReadHistoryListCSV(fname2);
 	// open form
 	Application::EnableVisualStyles();
 	Application::SetCompatibleTextRenderingDefault(false);

@@ -19,6 +19,7 @@ struct Record
     string tableid;
     string cusname;
     string phonenumber;
+    string Resid;
     int cusnum;
     int money;
     int dayT;

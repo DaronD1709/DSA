@@ -37,7 +37,7 @@ Record HistoryArr[100];
         }
     }
     // datban
-    void StamentSetTable(LinkedList<Restaurant> Chain, Stack<Record>& History, double& Totalmoney, string Resid, string phonenumber,string cusname, string Tableid, int cusnum, int dayT, int mothT, int yearT)
+    void StamentSetTable(LinkedList<Restaurant> &Chain, Stack<Record>& History, double& Totalmoney, string Resid, string phonenumber,string cusname, string Tableid, int cusnum, int dayT, int mothT, int yearT)
     {
         Restaurant a;
         a.Capacity = Chain.findNodeByID(Resid)->data.Capacity;
@@ -58,6 +58,7 @@ Record HistoryArr[100];
 
         // add
         Record u;
+        u.Resid = Resid;
         u.cusname = cusnum;
         u.phonenumber = phonenumber;
         u.AddorRemove = true;
@@ -95,6 +96,7 @@ Record HistoryArr[100];
 
         // add
         Record u;
+        u.Resid = Resid;
         u.cusname = cusname;
         u.phonenumber = phonenumber;
         u.AddorRemove = 0;
