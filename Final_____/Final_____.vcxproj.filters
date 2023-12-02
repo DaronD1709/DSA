@@ -50,5 +50,8 @@
     <ClInclude Include="File.h">
       <Filter>Header Files\Code</Filter>
     </ClInclude>
+    <ClInclude Include="CHashtable.h">
+      <Filter>Header Files\Code</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

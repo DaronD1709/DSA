@@ -96,21 +96,7 @@ public:
             std::cout << std::endl;
         }
     }
-    double getTotalProfit(int moth1, int moth2, int moth3) const
-    {
-        double totalProfit = 0.0;
-        Node* current = topNode;
-        while (current != nullptr)
-        {
-            if (current->data.mothT == moth1 || current->data.mothT == moth2 || current->data.mothT == moth3)
-            {
-                totalProfit += current->data.money;
-                current = current->next;
-            }
-        }
-        return totalProfit;
-    }
-    
+
      void ToArrayHistory(Record HistoryArr[]) const
     {
         int i = 0;

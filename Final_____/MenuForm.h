@@ -62,9 +62,9 @@ namespace Final {
 			// 
 			// CustomerButton
 			// 
-			this->CustomerButton->Font = (gcnew System::Drawing::Font(L"Microsoft Uighur", 22.2F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->CustomerButton->Font = (gcnew System::Drawing::Font(L"Agency FB", 22.2F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->CustomerButton->Location = System::Drawing::Point(257, 258);
+			this->CustomerButton->Location = System::Drawing::Point(254, 258);
 			this->CustomerButton->Name = L"CustomerButton";
 			this->CustomerButton->Size = System::Drawing::Size(209, 166);
 			this->CustomerButton->TabIndex = 0;
@@ -74,9 +74,9 @@ namespace Final {
 			// 
 			// Managerbutton
 			// 
-			this->Managerbutton->Font = (gcnew System::Drawing::Font(L"Microsoft Uighur", 22.2F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->Managerbutton->Font = (gcnew System::Drawing::Font(L"Agency FB", 22.2F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->Managerbutton->Location = System::Drawing::Point(579, 258);
+			this->Managerbutton->Location = System::Drawing::Point(584, 258);
 			this->Managerbutton->Name = L"Managerbutton";
 			this->Managerbutton->Size = System::Drawing::Size(214, 161);
 			this->Managerbutton->TabIndex = 1;
@@ -87,11 +87,11 @@ namespace Final {
 			// label1
 			// 
 			this->label1->AutoSize = true;
-			this->label1->Font = (gcnew System::Drawing::Font(L"Microsoft Uighur", 28.2F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->label1->Font = (gcnew System::Drawing::Font(L"Agency FB", 36, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label1->Location = System::Drawing::Point(379, 151);
+			this->label1->Location = System::Drawing::Point(325, 126);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(287, 56);
+			this->label1->Size = System::Drawing::Size(399, 72);
 			this->label1->TabIndex = 2;
 			this->label1->Text = L"Choose Your Role ";
 			// 

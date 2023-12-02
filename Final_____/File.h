@@ -4,8 +4,8 @@
 #include "_lib.h"
 #include "Fuction.h"
 
-string fname = "C://Users//HALO//Desktop//DSACHAIN1//DSA//RestauranList1.csv";
-string fname2 = "C://Users//HALO//Desktop//DSACHAIN1//DSA//HistoryList.csv";
+string fname = "F://DATA str//N2_LaHuyHoang_NguyenHuuDanh_NguyenDucVinh_DoMInhKhoa//DSA//RestauranList1.csv";
+std:: string fname2 = "F://DATA str//N2_LaHuyHoang_NguyenHuuDanh_NguyenDucVinh_DoMInhKhoa//DSA//HistoryList.csv";
 
 // viet de tu Arr -> File
 void writeRestaurantToCSV(string filename, Restaurant ChainArr[])
@@ -140,3 +140,5 @@ void writeHistoryToCSV(string filename, Record HistoryArr[])
 
     file.close();
 }
+
+

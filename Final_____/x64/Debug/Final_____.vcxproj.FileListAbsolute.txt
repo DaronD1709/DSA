@@ -33,3 +33,13 @@ C:\Users\HALO\Desktop\DSACHAIN1\DSA\Final_____\x64\Debug\Final.CustomerForm.reso
 C:\Users\HALO\Desktop\DSACHAIN1\DSA\Final_____\x64\Debug\Final.ManagerForm.resources
 C:\Users\HALO\Desktop\DSACHAIN1\DSA\Final_____\x64\Debug\Final.MenuForm.resources
 C:\Users\HALO\Desktop\DSACHAIN1\DSA\Final_____\x64\Debug\Final_____.vcxproj.GenerateResource.cache
+C:\Users\HALO\Desktop\N2_LaHuyHoang_NguyenHuuDanh_NguyenDucVinh_DoMInhKhoa\DSA\Final_____\x64\Debug\Final_____.vcxproj.AssemblyReference.cache
+C:\Users\HALO\Desktop\N2_LaHuyHoang_NguyenHuuDanh_NguyenDucVinh_DoMInhKhoa\DSA\Final_____\x64\Debug\Final.CustomerForm.resources
+C:\Users\HALO\Desktop\N2_LaHuyHoang_NguyenHuuDanh_NguyenDucVinh_DoMInhKhoa\DSA\Final_____\x64\Debug\Final.ManagerForm.resources
+C:\Users\HALO\Desktop\N2_LaHuyHoang_NguyenHuuDanh_NguyenDucVinh_DoMInhKhoa\DSA\Final_____\x64\Debug\Final.MenuForm.resources
+C:\Users\HALO\Desktop\N2_LaHuyHoang_NguyenHuuDanh_NguyenDucVinh_DoMInhKhoa\DSA\Final_____\x64\Debug\Final_____.vcxproj.GenerateResource.cache
+F:\DATA str\N2_LaHuyHoang_NguyenHuuDanh_NguyenDucVinh_DoMInhKhoa\DSA\Final_____\x64\Debug\Final_____.vcxproj.AssemblyReference.cache
+F:\DATA str\N2_LaHuyHoang_NguyenHuuDanh_NguyenDucVinh_DoMInhKhoa\DSA\Final_____\x64\Debug\Final.CustomerForm.resources
+F:\DATA str\N2_LaHuyHoang_NguyenHuuDanh_NguyenDucVinh_DoMInhKhoa\DSA\Final_____\x64\Debug\Final.ManagerForm.resources
+F:\DATA str\N2_LaHuyHoang_NguyenHuuDanh_NguyenDucVinh_DoMInhKhoa\DSA\Final_____\x64\Debug\Final.MenuForm.resources
+F:\DATA str\N2_LaHuyHoang_NguyenHuuDanh_NguyenDucVinh_DoMInhKhoa\DSA\Final_____\x64\Debug\Final_____.vcxproj.GenerateResource.cache

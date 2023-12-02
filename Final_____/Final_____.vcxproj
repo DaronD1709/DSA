@@ -123,6 +123,7 @@
     <ClCompile Include="Main.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="CHashtable.h" />
     <ClInclude Include="CStack.h" />
     <ClInclude Include="CustomerForm.h">
       <FileType>CppForm</FileType>

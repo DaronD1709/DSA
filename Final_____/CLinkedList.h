@@ -127,7 +127,7 @@ public:
 
             while (ptr1->next != lptr)
             {
-                if (ptr1->data.profit > ptr1->next->data.profit)
+                if (ptr1->data.Capacity > ptr1->next->data.Capacity)
                 {
                     
                     T temp = ptr1->data;

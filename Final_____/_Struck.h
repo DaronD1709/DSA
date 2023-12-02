@@ -3,7 +3,7 @@
 struct Table
 {
     string id;
-    bool statement = 0;
+    bool statement ;
 };
 struct Restaurant
 {

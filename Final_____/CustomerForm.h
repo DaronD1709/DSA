@@ -1,5 +1,6 @@
 #pragma once
 #include "Fuction.h"
+#include "File.h"
 namespace Final {
 
 	using namespace System;
@@ -100,6 +101,11 @@ namespace Final {
 	private: System::Windows::Forms::Button^ ViewRes;
 	private: System::Windows::Forms::Label^ label5;
 	private: System::Windows::Forms::Label^ label6;
+	private: System::Windows::Forms::Label^ label16;
+	private: System::Windows::Forms::TextBox^ finalbox;
+	private: System::Windows::Forms::Label^ label15;
+	private: System::Windows::Forms::ComboBox^ cupponbox;
+
 
 
 
@@ -140,6 +146,10 @@ namespace Final {
 		{
 			this->tabControl1 = (gcnew System::Windows::Forms::TabControl());
 			this->tabPage1 = (gcnew System::Windows::Forms::TabPage());
+			this->label16 = (gcnew System::Windows::Forms::Label());
+			this->finalbox = (gcnew System::Windows::Forms::TextBox());
+			this->label15 = (gcnew System::Windows::Forms::Label());
+			this->cupponbox = (gcnew System::Windows::Forms::ComboBox());
 			this->label5 = (gcnew System::Windows::Forms::Label());
 			this->ViewRes = (gcnew System::Windows::Forms::Button());
 			this->MothBox = (gcnew System::Windows::Forms::TextBox());
@@ -197,6 +207,10 @@ namespace Final {
 			// 
 			// tabPage1
 			// 
+			this->tabPage1->Controls->Add(this->label16);
+			this->tabPage1->Controls->Add(this->finalbox);
+			this->tabPage1->Controls->Add(this->label15);
+			this->tabPage1->Controls->Add(this->cupponbox);
 			this->tabPage1->Controls->Add(this->label5);
 			this->tabPage1->Controls->Add(this->ViewRes);
 			this->tabPage1->Controls->Add(this->MothBox);
@@ -229,12 +243,55 @@ namespace Final {
 			this->tabPage1->UseVisualStyleBackColor = true;
 			this->tabPage1->Click += gcnew System::EventHandler(this, &CustomerForm::tabPage1_Click);
 			// 
+			// label16
+			// 
+			this->label16->AutoSize = true;
+			this->label16->Font = (gcnew System::Drawing::Font(L"Agency FB", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label16->Location = System::Drawing::Point(374, 431);
+			this->label16->Name = L"label16";
+			this->label16->Size = System::Drawing::Size(142, 36);
+			this->label16->TabIndex = 23;
+			this->label16->Text = L"Final Payment";
+			// 
+			// finalbox
+			// 
+			this->finalbox->Location = System::Drawing::Point(380, 472);
+			this->finalbox->Margin = System::Windows::Forms::Padding(3, 5, 3, 5);
+			this->finalbox->Multiline = true;
+			this->finalbox->Name = L"finalbox";
+			this->finalbox->Size = System::Drawing::Size(252, 62);
+			this->finalbox->TabIndex = 22;
+			// 
+			// label15
+			// 
+			this->label15->AutoSize = true;
+			this->label15->Font = (gcnew System::Drawing::Font(L"Agency FB", 13.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label15->Location = System::Drawing::Point(79, 456);
+			this->label15->Name = L"label15";
+			this->label15->Size = System::Drawing::Size(67, 28);
+			this->label15->TabIndex = 21;
+			this->label15->Text = L"Cuppon";
+			// 
+			// cupponbox
+			// 
+			this->cupponbox->FormattingEnabled = true;
+			this->cupponbox->Items->AddRange(gcnew cli::array< System::Object^  >(5) {
+				L"KHAITRUONG", L"THANHLAP", L"KINIEM", L"TETDENXUANVE",
+					L"MUAHEVUINHON"
+			});
+			this->cupponbox->Location = System::Drawing::Point(84, 487);
+			this->cupponbox->Name = L"cupponbox";
+			this->cupponbox->Size = System::Drawing::Size(246, 36);
+			this->cupponbox->TabIndex = 20;
+			// 
 			// label5
 			// 
 			this->label5->AutoSize = true;
 			this->label5->Font = (gcnew System::Drawing::Font(L"Agency FB", 36, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label5->Location = System::Drawing::Point(205, 63);
+			this->label5->Location = System::Drawing::Point(205, 30);
 			this->label5->Name = L"label5";
 			this->label5->Size = System::Drawing::Size(389, 72);
 			this->label5->TabIndex = 19;
@@ -244,7 +301,7 @@ namespace Final {
 			// 
 			this->ViewRes->Font = (gcnew System::Drawing::Font(L"Agency FB", 13.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->ViewRes->Location = System::Drawing::Point(653, 230);
+			this->ViewRes->Location = System::Drawing::Point(662, 159);
 			this->ViewRes->Margin = System::Windows::Forms::Padding(3, 5, 3, 5);
 			this->ViewRes->Name = L"ViewRes";
 			this->ViewRes->Size = System::Drawing::Size(127, 59);
@@ -255,7 +312,7 @@ namespace Final {
 			// 
 			// MothBox
 			// 
-			this->MothBox->Location = System::Drawing::Point(147, 448);
+			this->MothBox->Location = System::Drawing::Point(156, 377);
 			this->MothBox->Margin = System::Windows::Forms::Padding(3, 5, 3, 5);
 			this->MothBox->Multiline = true;
 			this->MothBox->Name = L"MothBox";
@@ -265,7 +322,7 @@ namespace Final {
 			// 
 			// YearBox
 			// 
-			this->YearBox->Location = System::Drawing::Point(217, 448);
+			this->YearBox->Location = System::Drawing::Point(226, 377);
 			this->YearBox->Margin = System::Windows::Forms::Padding(3, 5, 3, 5);
 			this->YearBox->Multiline = true;
 			this->YearBox->Name = L"YearBox";
@@ -277,7 +334,7 @@ namespace Final {
 			this->label8->AutoSize = true;
 			this->label8->Font = (gcnew System::Drawing::Font(L"Agency FB", 13.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label8->Location = System::Drawing::Point(371, 308);
+			this->label8->Location = System::Drawing::Point(380, 237);
 			this->label8->Name = L"label8";
 			this->label8->Size = System::Drawing::Size(169, 28);
 			this->label8->TabIndex = 15;
@@ -285,7 +342,7 @@ namespace Final {
 			// 
 			// CusnumBox
 			// 
-			this->CusnumBox->Location = System::Drawing::Point(371, 341);
+			this->CusnumBox->Location = System::Drawing::Point(380, 270);
 			this->CusnumBox->Margin = System::Windows::Forms::Padding(3, 5, 3, 5);
 			this->CusnumBox->Multiline = true;
 			this->CusnumBox->Name = L"CusnumBox";
@@ -297,7 +354,7 @@ namespace Final {
 			this->label7->AutoSize = true;
 			this->label7->Font = (gcnew System::Drawing::Font(L"Agency FB", 13.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label7->Location = System::Drawing::Point(371, 209);
+			this->label7->Location = System::Drawing::Point(380, 138);
 			this->label7->Name = L"label7";
 			this->label7->Size = System::Drawing::Size(115, 28);
 			this->label7->TabIndex = 13;
@@ -305,7 +362,7 @@ namespace Final {
 			// 
 			// ResidBox
 			// 
-			this->ResidBox->Location = System::Drawing::Point(371, 242);
+			this->ResidBox->Location = System::Drawing::Point(380, 171);
 			this->ResidBox->Margin = System::Windows::Forms::Padding(3, 5, 3, 5);
 			this->ResidBox->Multiline = true;
 			this->ResidBox->Name = L"ResidBox";
@@ -343,7 +400,7 @@ namespace Final {
 			// 
 			this->listbutton->Font = (gcnew System::Drawing::Font(L"Agency FB", 13.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->listbutton->Location = System::Drawing::Point(653, 436);
+			this->listbutton->Location = System::Drawing::Point(662, 365);
 			this->listbutton->Margin = System::Windows::Forms::Padding(3, 5, 3, 5);
 			this->listbutton->Name = L"listbutton";
 			this->listbutton->Size = System::Drawing::Size(127, 59);
@@ -357,7 +414,7 @@ namespace Final {
 			this->label4->AutoSize = true;
 			this->label4->Font = (gcnew System::Drawing::Font(L"Agency FB", 13.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label4->Location = System::Drawing::Point(70, 415);
+			this->label4->Location = System::Drawing::Point(79, 344);
 			this->label4->Name = L"label4";
 			this->label4->Size = System::Drawing::Size(115, 28);
 			this->label4->TabIndex = 8;
@@ -368,7 +425,7 @@ namespace Final {
 			this->label3->AutoSize = true;
 			this->label3->Font = (gcnew System::Drawing::Font(L"Agency FB", 13.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label3->Location = System::Drawing::Point(366, 415);
+			this->label3->Location = System::Drawing::Point(375, 344);
 			this->label3->Name = L"label3";
 			this->label3->Size = System::Drawing::Size(77, 28);
 			this->label3->TabIndex = 7;
@@ -379,7 +436,7 @@ namespace Final {
 			this->label2->AutoSize = true;
 			this->label2->Font = (gcnew System::Drawing::Font(L"Agency FB", 13.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label2->Location = System::Drawing::Point(70, 308);
+			this->label2->Location = System::Drawing::Point(79, 237);
 			this->label2->Name = L"label2";
 			this->label2->Size = System::Drawing::Size(127, 28);
 			this->label2->TabIndex = 6;
@@ -390,7 +447,7 @@ namespace Final {
 			this->label1->AutoSize = true;
 			this->label1->Font = (gcnew System::Drawing::Font(L"Agency FB", 13.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label1->Location = System::Drawing::Point(70, 209);
+			this->label1->Location = System::Drawing::Point(79, 138);
 			this->label1->Name = L"label1";
 			this->label1->Size = System::Drawing::Size(59, 28);
 			this->label1->TabIndex = 5;
@@ -410,7 +467,7 @@ namespace Final {
 			// 
 			// DayBox
 			// 
-			this->DayBox->Location = System::Drawing::Point(75, 448);
+			this->DayBox->Location = System::Drawing::Point(84, 377);
 			this->DayBox->Margin = System::Windows::Forms::Padding(3, 5, 3, 5);
 			this->DayBox->Multiline = true;
 			this->DayBox->Name = L"DayBox";
@@ -419,7 +476,7 @@ namespace Final {
 			// 
 			// idtextbox
 			// 
-			this->idtextbox->Location = System::Drawing::Point(371, 448);
+			this->idtextbox->Location = System::Drawing::Point(380, 377);
 			this->idtextbox->Margin = System::Windows::Forms::Padding(3, 5, 3, 5);
 			this->idtextbox->Multiline = true;
 			this->idtextbox->Name = L"idtextbox";
@@ -428,7 +485,7 @@ namespace Final {
 			// 
 			// phonetextbox
 			// 
-			this->phonetextbox->Location = System::Drawing::Point(73, 341);
+			this->phonetextbox->Location = System::Drawing::Point(82, 270);
 			this->phonetextbox->Margin = System::Windows::Forms::Padding(3, 5, 3, 5);
 			this->phonetextbox->Multiline = true;
 			this->phonetextbox->Name = L"phonetextbox";
@@ -437,7 +494,7 @@ namespace Final {
 			// 
 			// nametextbox
 			// 
-			this->nametextbox->Location = System::Drawing::Point(73, 242);
+			this->nametextbox->Location = System::Drawing::Point(82, 171);
 			this->nametextbox->Margin = System::Windows::Forms::Padding(3, 5, 3, 5);
 			this->nametextbox->Multiline = true;
 			this->nametextbox->Name = L"nametextbox";
@@ -477,7 +534,7 @@ namespace Final {
 			this->label6->AutoSize = true;
 			this->label6->Font = (gcnew System::Drawing::Font(L"Agency FB", 36, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label6->Location = System::Drawing::Point(478, 42);
+			this->label6->Location = System::Drawing::Point(507, 37);
 			this->label6->Name = L"label6";
 			this->label6->Size = System::Drawing::Size(367, 72);
 			this->label6->TabIndex = 34;
@@ -485,7 +542,7 @@ namespace Final {
 			// 
 			// MothDel
 			// 
-			this->MothDel->Location = System::Drawing::Point(408, 453);
+			this->MothDel->Location = System::Drawing::Point(423, 448);
 			this->MothDel->Margin = System::Windows::Forms::Padding(3, 5, 3, 5);
 			this->MothDel->Multiline = true;
 			this->MothDel->Name = L"MothDel";
@@ -494,7 +551,7 @@ namespace Final {
 			// 
 			// YearDel
 			// 
-			this->YearDel->Location = System::Drawing::Point(490, 453);
+			this->YearDel->Location = System::Drawing::Point(505, 448);
 			this->YearDel->Margin = System::Windows::Forms::Padding(3, 5, 3, 5);
 			this->YearDel->Multiline = true;
 			this->YearDel->Name = L"YearDel";
@@ -504,7 +561,7 @@ namespace Final {
 			// label9
 			// 
 			this->label9->AutoSize = true;
-			this->label9->Location = System::Drawing::Point(715, 280);
+			this->label9->Location = System::Drawing::Point(730, 275);
 			this->label9->Name = L"label9";
 			this->label9->Size = System::Drawing::Size(169, 28);
 			this->label9->TabIndex = 31;
@@ -512,7 +569,7 @@ namespace Final {
 			// 
 			// NumDel
 			// 
-			this->NumDel->Location = System::Drawing::Point(720, 328);
+			this->NumDel->Location = System::Drawing::Point(735, 323);
 			this->NumDel->Margin = System::Windows::Forms::Padding(3, 5, 3, 5);
 			this->NumDel->Multiline = true;
 			this->NumDel->Name = L"NumDel";
@@ -522,7 +579,7 @@ namespace Final {
 			// label10
 			// 
 			this->label10->AutoSize = true;
-			this->label10->Location = System::Drawing::Point(715, 165);
+			this->label10->Location = System::Drawing::Point(730, 160);
 			this->label10->Name = L"label10";
 			this->label10->Size = System::Drawing::Size(115, 28);
 			this->label10->TabIndex = 29;
@@ -530,7 +587,7 @@ namespace Final {
 			// 
 			// ResDel
 			// 
-			this->ResDel->Location = System::Drawing::Point(720, 207);
+			this->ResDel->Location = System::Drawing::Point(735, 202);
 			this->ResDel->Margin = System::Windows::Forms::Padding(3, 5, 3, 5);
 			this->ResDel->Multiline = true;
 			this->ResDel->Name = L"ResDel";
@@ -539,10 +596,10 @@ namespace Final {
 			// 
 			// buttondone
 			// 
-			this->buttondone->Location = System::Drawing::Point(750, 563);
+			this->buttondone->Location = System::Drawing::Point(735, 530);
 			this->buttondone->Margin = System::Windows::Forms::Padding(3, 5, 3, 5);
 			this->buttondone->Name = L"buttondone";
-			this->buttondone->Size = System::Drawing::Size(274, 84);
+			this->buttondone->Size = System::Drawing::Size(304, 84);
 			this->buttondone->TabIndex = 27;
 			this->buttondone->Text = L"Done ";
 			this->buttondone->UseVisualStyleBackColor = true;
@@ -550,10 +607,10 @@ namespace Final {
 			// 
 			// button2
 			// 
-			this->button2->Location = System::Drawing::Point(330, 563);
+			this->button2->Location = System::Drawing::Point(345, 530);
 			this->button2->Margin = System::Windows::Forms::Padding(3, 5, 3, 5);
 			this->button2->Name = L"button2";
-			this->button2->Size = System::Drawing::Size(274, 84);
+			this->button2->Size = System::Drawing::Size(304, 84);
 			this->button2->TabIndex = 26;
 			this->button2->Text = L"Clear ";
 			this->button2->UseVisualStyleBackColor = true;
@@ -562,7 +619,7 @@ namespace Final {
 			// label11
 			// 
 			this->label11->AutoSize = true;
-			this->label11->Location = System::Drawing::Point(325, 409);
+			this->label11->Location = System::Drawing::Point(340, 404);
 			this->label11->Name = L"label11";
 			this->label11->Size = System::Drawing::Size(115, 28);
 			this->label11->TabIndex = 25;
@@ -571,7 +628,7 @@ namespace Final {
 			// label12
 			// 
 			this->label12->AutoSize = true;
-			this->label12->Location = System::Drawing::Point(715, 409);
+			this->label12->Location = System::Drawing::Point(730, 404);
 			this->label12->Name = L"label12";
 			this->label12->Size = System::Drawing::Size(77, 28);
 			this->label12->TabIndex = 24;
@@ -580,7 +637,7 @@ namespace Final {
 			// label13
 			// 
 			this->label13->AutoSize = true;
-			this->label13->Location = System::Drawing::Point(327, 280);
+			this->label13->Location = System::Drawing::Point(342, 275);
 			this->label13->Name = L"label13";
 			this->label13->Size = System::Drawing::Size(127, 28);
 			this->label13->TabIndex = 23;
@@ -589,7 +646,7 @@ namespace Final {
 			// label14
 			// 
 			this->label14->AutoSize = true;
-			this->label14->Location = System::Drawing::Point(327, 174);
+			this->label14->Location = System::Drawing::Point(342, 169);
 			this->label14->Name = L"label14";
 			this->label14->Size = System::Drawing::Size(59, 28);
 			this->label14->TabIndex = 22;
@@ -597,7 +654,7 @@ namespace Final {
 			// 
 			// DayDel
 			// 
-			this->DayDel->Location = System::Drawing::Point(330, 453);
+			this->DayDel->Location = System::Drawing::Point(345, 448);
 			this->DayDel->Margin = System::Windows::Forms::Padding(3, 5, 3, 5);
 			this->DayDel->Multiline = true;
 			this->DayDel->Name = L"DayDel";
@@ -606,7 +663,7 @@ namespace Final {
 			// 
 			// TableDel
 			// 
-			this->TableDel->Location = System::Drawing::Point(720, 453);
+			this->TableDel->Location = System::Drawing::Point(735, 448);
 			this->TableDel->Margin = System::Windows::Forms::Padding(3, 5, 3, 5);
 			this->TableDel->Multiline = true;
 			this->TableDel->Name = L"TableDel";
@@ -615,7 +672,7 @@ namespace Final {
 			// 
 			// PhoneDel
 			// 
-			this->PhoneDel->Location = System::Drawing::Point(330, 328);
+			this->PhoneDel->Location = System::Drawing::Point(345, 323);
 			this->PhoneDel->Margin = System::Windows::Forms::Padding(3, 5, 3, 5);
 			this->PhoneDel->Multiline = true;
 			this->PhoneDel->Name = L"PhoneDel";
@@ -624,7 +681,7 @@ namespace Final {
 			// 
 			// NameDel
 			// 
-			this->NameDel->Location = System::Drawing::Point(330, 207);
+			this->NameDel->Location = System::Drawing::Point(345, 202);
 			this->NameDel->Margin = System::Windows::Forms::Padding(3, 5, 3, 5);
 			this->NameDel->Multiline = true;
 			this->NameDel->Name = L"NameDel";
@@ -662,6 +719,7 @@ namespace Final {
 
 private: System::Void donebutton_Click(System::Object^ sender, System::EventArgs^ e) 
 {
+
 	string cusname = toStandardString(nametextbox->Text);
 	string phonenumber = toStandardString(phonetextbox->Text);
 	string Resid = toStandardString(ResidBox->Text);
@@ -670,13 +728,28 @@ private: System::Void donebutton_Click(System::Object^ sender, System::EventArgs
 	int dayT = stoi(toStandardString(DayBox->Text));
 	int mothT = stoi(toStandardString(MothBox->Text));
 	int yearT = stoi(toStandardString(YearBox->Text));
-	StamentSetTable(Chain, History, TotalMoney, Resid,phonenumber,cusname, Tableid, cusnum, dayT, mothT, yearT);
+
+	if (isValidDate(dayT, mothT, yearT) == false)
+	{
+		MessageBox::Show("Date not Valid");
+		return;
+	}
+
+	StamentSetTable(Chain, History, TotalMoney, Resid,cusname, phonenumber, Tableid, cusnum, dayT, mothT, yearT);
 	ResidBox->Clear();
 	idtextbox->Clear();
 	CusnumBox->Clear();
 	DayBox->Clear();
 	MothBox->Clear();
 	YearBox->Clear();
+	Addcuppon(cuppon);
+	int* val = cuppon.get(toStandardString(cupponbox->Text));
+	int a = cusnum * moneyperone - *val;
+	string ab = to_string(a);
+	finalbox->Text = gcnew String (ab.c_str());
+	ToArrayHistory(History, HistoryArr);
+	writeHistoryToCSV(fname2, HistoryArr);
+
 }
 private: System::Void ResidBox_TextChanged(System::Object^ sender, System::EventArgs^ e) {
 }
@@ -697,6 +770,12 @@ private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e
 	int mothT = stoi(toStandardString(MothDel->Text));
 	int yearT = stoi(toStandardString(YearDel->Text));
 
+	if (isValidDate(dayT, mothT, yearT) == false)
+	{
+		MessageBox::Show("Date not Valid");
+		return;
+	}
+
 	StamentDeleteTable(Chain, History, TotalMoney, Resid, phonenumber, cusname, Tableid, cusnum, dayT, mothT, yearT);
 
 	ResDel->Clear();
@@ -705,6 +784,8 @@ private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e
 	DayDel->Clear();
 	MothDel->Clear();
 	YearDel->Clear();
+	ToArrayHistory(History, HistoryArr);
+	writeHistoryToCSV(fname2, HistoryArr);
 }
 
 private: System::Void ViewRes_Click(System::Object^ sender, System::EventArgs^ e) 
@@ -731,6 +812,7 @@ private: System::Void ViewRes_Click(System::Object^ sender, System::EventArgs^ e
 		CusGirdView->Rows[i]->Cells[2]->Value = ChainArr[i].Capacity;
 		CusGirdView->Rows[i]->Cells[3]->Value = ChainArr[i].staff;
 	}
+
 }
 private: System::Void listbutton_Click(System::Object^ sender, System::EventArgs^ e) 
 {
@@ -749,11 +831,11 @@ private: System::Void listbutton_Click(System::Object^ sender, System::EventArgs
 	{
 		CusGirdView->Rows->Add();
 		CusGirdView->Rows[i]->Cells[0]->Value = gcnew String(A[i].id.c_str());
-		if (A[i].statement = true)
+		if (A[i].statement == true)
 		{
 			CusGirdView->Rows[i]->Cells[1]->Value = gcnew String("Booked");
 		}
-		else
+		else if (A[i].statement == false)
 		{
 			CusGirdView->Rows[i]->Cells[1]->Value = gcnew String("Free");
 		}
@@ -778,6 +860,8 @@ private: System::Void clearbutton_Click(System::Object^ sender, System::EventArg
 }
 private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) 
 {
+	NameDel->Clear();
+	PhoneDel->Clear();
 	ResDel->Clear();
 	TableDel->Clear();
 	NumDel->Clear();
